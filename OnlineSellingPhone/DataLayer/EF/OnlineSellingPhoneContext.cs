@@ -33,7 +33,7 @@ namespace DataLayer.EF
                 .HasColumnType("Date");
 
             modelBuilder.Entity<Staff>().ToTable("Staffs");
-            modelBuilder.Entity<Customer>().ToTable("Staffs");
+            modelBuilder.Entity<Customer>().ToTable("Customers");
                 
         }
 

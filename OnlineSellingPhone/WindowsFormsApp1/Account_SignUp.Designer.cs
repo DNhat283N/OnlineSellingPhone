@@ -34,14 +34,14 @@ namespace WindowsFormsApp1
             this.lblNoPhonenumber = new System.Windows.Forms.Label();
             this.lblNoName = new System.Windows.Forms.Label();
             this.lblNoFirstname = new System.Windows.Forms.Label();
-            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnSignUp = new System.Windows.Forms.Button();
             this.dtpBirthdate = new System.Windows.Forms.DateTimePicker();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
-            this.txtPhonenumber = new System.Windows.Forms.TextBox();
-            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtPhoneNumber = new System.Windows.Forms.TextBox();
+            this.txtFirstName = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtFirstname = new System.Windows.Forms.TextBox();
+            this.txtLastname = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -115,16 +115,17 @@ namespace WindowsFormsApp1
             this.lblNoFirstname.Text = "* Vui lòng nhập họ";
             this.lblNoFirstname.Visible = false;
             // 
-            // btnLogin
+            // btnSignUp
             // 
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(475, 466);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(214, 51);
-            this.btnLogin.TabIndex = 36;
-            this.btnLogin.Text = "Đăng kí";
-            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnSignUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignUp.Location = new System.Drawing.Point(475, 466);
+            this.btnSignUp.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSignUp.Name = "btnSignUp";
+            this.btnSignUp.Size = new System.Drawing.Size(214, 51);
+            this.btnSignUp.TabIndex = 36;
+            this.btnSignUp.Text = "Đăng kí";
+            this.btnSignUp.UseVisualStyleBackColor = true;
+            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
             // 
             // dtpBirthdate
             // 
@@ -150,21 +151,21 @@ namespace WindowsFormsApp1
             this.txtUsername.Size = new System.Drawing.Size(315, 32);
             this.txtUsername.TabIndex = 33;
             // 
-            // txtPhonenumber
+            // txtPhoneNumber
             // 
-            this.txtPhonenumber.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhonenumber.Location = new System.Drawing.Point(475, 235);
-            this.txtPhonenumber.Name = "txtPhonenumber";
-            this.txtPhonenumber.Size = new System.Drawing.Size(315, 32);
-            this.txtPhonenumber.TabIndex = 32;
+            this.txtPhoneNumber.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhoneNumber.Location = new System.Drawing.Point(475, 235);
+            this.txtPhoneNumber.Name = "txtPhoneNumber";
+            this.txtPhoneNumber.Size = new System.Drawing.Size(315, 32);
+            this.txtPhoneNumber.TabIndex = 32;
             // 
-            // txtName
+            // txtFirstName
             // 
-            this.txtName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(475, 181);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(315, 32);
-            this.txtName.TabIndex = 31;
+            this.txtFirstName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFirstName.Location = new System.Drawing.Point(475, 181);
+            this.txtFirstName.Name = "txtFirstName";
+            this.txtFirstName.Size = new System.Drawing.Size(315, 32);
+            this.txtFirstName.TabIndex = 31;
             // 
             // label7
             // 
@@ -177,13 +178,13 @@ namespace WindowsFormsApp1
             this.label7.TabIndex = 30;
             this.label7.Text = "Tên";
             // 
-            // txtFirstname
+            // txtLastname
             // 
-            this.txtFirstname.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFirstname.Location = new System.Drawing.Point(475, 124);
-            this.txtFirstname.Name = "txtFirstname";
-            this.txtFirstname.Size = new System.Drawing.Size(315, 32);
-            this.txtFirstname.TabIndex = 29;
+            this.txtLastname.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLastname.Location = new System.Drawing.Point(475, 124);
+            this.txtLastname.Name = "txtLastname";
+            this.txtLastname.Size = new System.Drawing.Size(315, 32);
+            this.txtLastname.TabIndex = 29;
             // 
             // label6
             // 
@@ -260,14 +261,14 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.lblNoPhonenumber);
             this.Controls.Add(this.lblNoName);
             this.Controls.Add(this.lblNoFirstname);
-            this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.btnSignUp);
             this.Controls.Add(this.dtpBirthdate);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
-            this.Controls.Add(this.txtPhonenumber);
-            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.txtPhoneNumber);
+            this.Controls.Add(this.txtFirstName);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtFirstname);
+            this.Controls.Add(this.txtLastname);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
@@ -275,7 +276,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Account_SignUp";
             this.Size = new System.Drawing.Size(1158, 590);
             this.ResumeLayout(false);
@@ -290,14 +291,14 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label lblNoPhonenumber;
         private System.Windows.Forms.Label lblNoName;
         private System.Windows.Forms.Label lblNoFirstname;
-        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnSignUp;
         private System.Windows.Forms.DateTimePicker dtpBirthdate;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.TextBox txtPhonenumber;
-        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtPhoneNumber;
+        private System.Windows.Forms.TextBox txtFirstName;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtFirstname;
+        private System.Windows.Forms.TextBox txtLastname;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
