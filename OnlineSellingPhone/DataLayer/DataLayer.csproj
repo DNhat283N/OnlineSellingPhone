@@ -66,9 +66,9 @@
     <Compile Include="Enities\PhoneNumber.cs" />
     <Compile Include="Enities\Staff.cs" />
     <Compile Include="Enities\UserRoleEnum.cs" />
-    <Compile Include="Migrations\202404140213138_Migrations.cs" />
-    <Compile Include="Migrations\202404140213138_Migrations.designer.cs">
-      <DependentUpon>202404140213138_Migrations.cs</DependentUpon>
+    <Compile Include="Migrations\202404160235446_Migrations.cs" />
+    <Compile Include="Migrations\202404160235446_Migrations.designer.cs">
+      <DependentUpon>202404160235446_Migrations.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -78,8 +78,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202404140213138_Migrations.resx">
-      <DependentUpon>202404140213138_Migrations.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202404160235446_Migrations.resx">
+      <DependentUpon>202404160235446_Migrations.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
