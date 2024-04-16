@@ -36,5 +36,12 @@ namespace DataLayer.Enities
         [ForeignKey("Order_ID")]
         public virtual Order Order { get; set; }
 
+        public OrderDetail(int orderDetail_Quantity, DateTime orderDate, int phone_ID, int order_ID)
+        {
+            OrderDetail_Quantity = orderDetail_Quantity;
+            OrderDate = orderDate;
+            Phone_ID = phone_ID;
+            Order_ID = order_ID;
+        }
     }
 }

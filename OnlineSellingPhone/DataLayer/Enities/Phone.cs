@@ -34,5 +34,13 @@ namespace DataLayer.Enities
         [ForeignKey("Manufacturer_ID")]
         public virtual Manufacturer Manufacturer { get; set; }
 
+        public Phone(string phone_Name, string phone_Color, double phone_Price, int phone_ReadyInStock, int manufacturer_ID)
+        {
+            Phone_Name = phone_Name;
+            Phone_Color = phone_Color;
+            Phone_Price = phone_Price;
+            Phone_ReadyInStock = phone_ReadyInStock;
+            Manufacturer_ID = manufacturer_ID;
+        }
     }
 }

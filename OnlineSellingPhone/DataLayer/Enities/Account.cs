@@ -27,6 +27,14 @@ namespace DataLayer.Enities
         public virtual Customer Customer { get; set; }
         [Column]
         [Required]
-        public UserRoleEnum userRoleEnum { get; set; } = UserRoleEnum.CUSTOMER;
+        public UserRoleEnum Account_UserRoleEnum { get; set; } = UserRoleEnum.CUSTOMER;
+
+        public Account(string account_Username, string account_Password, int customer_ID, UserRoleEnum account_UserRoleEnum = UserRoleEnum.CUSTOMER)
+        {
+            Account_Username = account_Username;
+            Account_Password = account_Password;
+            Customer_ID = customer_ID;
+            Account_UserRoleEnum = account_UserRoleEnum;
+        }
     }
 }

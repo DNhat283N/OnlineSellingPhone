@@ -18,5 +18,11 @@ namespace DataLayer.Enities
         [Required]
         [MaxLength(20)]
         public string Staff_Posistion { get; set; }
+
+        public Staff(string fname, bool gender, DateTime birthday, DateTime staff_FirsDayOfWork, string staff_Posistion)
+        {
+            Staff_FirsDayOfWork = staff_FirsDayOfWork;
+            Staff_Posistion = staff_Posistion;
+        }
     }
 }

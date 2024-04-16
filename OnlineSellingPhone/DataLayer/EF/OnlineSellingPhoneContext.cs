@@ -26,5 +26,16 @@ namespace DataLayer.EF
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
 
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Customer>()
+                .Property(p => p.Customer_BirthDay)
+                .HasColumnType("Date");
+
+            modelBuilder.Entity<Staff>().ToTable("Staffs");
+            modelBuilder.Entity<Customer>().ToTable("Staffs");
+                
+        }
+
     }
 }

@@ -24,5 +24,11 @@ namespace DataLayer.Enities
         public int Customer_ID { get; set; }
         [ForeignKey("Customer_ID")]
         public virtual Customer Customer { get; set; }
+
+        public Order(double order_TotalAmount, int customer_ID)
+        {
+            Order_TotalAmount = order_TotalAmount;
+            Customer_ID = customer_ID;
+        }
     }
 }
