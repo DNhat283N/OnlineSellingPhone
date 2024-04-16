@@ -22,5 +22,11 @@ namespace DataLayer.Enities
         public int Phone_ID { get; set; }
         [ForeignKey("Phone_ID")]
         public virtual Phone Phone{ get; set; }
+
+        public Image(string image_URL, int phone_ID)
+        {
+            Image_URL = image_URL;
+            Phone_ID = phone_ID;
+        }
     }
 }

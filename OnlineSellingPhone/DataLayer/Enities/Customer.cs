@@ -24,5 +24,17 @@ namespace DataLayer.Enities
         [Column]
         [Required]
         public Boolean Customer_Gender { get; set; }
+
+
+        public Customer(string fname, bool gender, DateTime birthday)
+        {
+            this.Customer_FName = fname;
+            this.Customer_Gender = gender;
+            this.Customer_BirthDay = birthday;
+        }
+
+        public Customer()
+        {
+        }
     }
 }

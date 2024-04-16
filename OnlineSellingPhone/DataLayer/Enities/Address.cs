@@ -18,5 +18,10 @@ namespace DataLayer.Enities
         [Required]
         [MaxLength(50)]
         public string Address_String { get; set; }
+
+        public Address(string address_String)
+        {
+            Address_String = address_String;
+        }
     }
 }
