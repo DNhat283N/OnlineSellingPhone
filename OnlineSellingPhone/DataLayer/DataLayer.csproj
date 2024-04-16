@@ -53,7 +53,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAO.cs" />
     <Compile Include="EF\OnlineSellingPhoneContext.cs" />
     <Compile Include="Enities\Account.cs" />
     <Compile Include="Enities\Address.cs" />
@@ -67,9 +66,9 @@
     <Compile Include="Enities\PhoneNumber.cs" />
     <Compile Include="Enities\Staff.cs" />
     <Compile Include="Enities\UserRoleEnum.cs" />
-    <Compile Include="Migrations\202404160852376_Migrations.cs" />
-    <Compile Include="Migrations\202404160852376_Migrations.designer.cs">
-      <DependentUpon>202404160852376_Migrations.cs</DependentUpon>
+    <Compile Include="Migrations\202404161000305_Migrations.cs" />
+    <Compile Include="Migrations\202404161000305_Migrations.designer.cs">
+      <DependentUpon>202404161000305_Migrations.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -79,8 +78,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202404160852376_Migrations.resx">
-      <DependentUpon>202404160852376_Migrations.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202404161000305_Migrations.resx">
+      <DependentUpon>202404161000305_Migrations.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

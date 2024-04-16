@@ -16,7 +16,7 @@ namespace DataLayer.Enities
         public int PhoneNumber_ID { get; set; }
         [Column]
         [Required]
-        [MaxLength(10)]
+        [MaxLength(10), MinLength(10)]
         public string PhoneNumber_Number { get; set; }
         [Column]
         [Required]

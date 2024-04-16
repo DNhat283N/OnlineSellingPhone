@@ -18,20 +18,17 @@
                         Account_UserRoleEnum = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Account_ID)
-                .ForeignKey("dbo.Staffs", t => t.Customer_ID, cascadeDelete: true)
+                .ForeignKey("dbo.Customers", t => t.Customer_ID, cascadeDelete: true)
                 .Index(t => t.Customer_ID);
             
             CreateTable(
-                "dbo.Staffs",
+                "dbo.Customers",
                 c => new
                     {
                         Customer_ID = c.Int(nullable: false, identity: true),
                         Customer_FName = c.String(nullable: false, maxLength: 35),
                         Customer_BirthDay = c.DateTime(nullable: false, storeType: "date"),
                         Customer_Gender = c.Boolean(nullable: false),
-                        Staff_FirsDayOfWork = c.DateTime(),
-                        Staff_Posistion = c.String(maxLength: 20),
-                        Discriminator = c.String(nullable: false, maxLength: 128),
                     })
                 .PrimaryKey(t => t.Customer_ID);
             
@@ -53,7 +50,7 @@
                     })
                 .PrimaryKey(t => new { t.Address_ID, t.Customer_ID })
                 .ForeignKey("dbo.Addresses", t => t.Address_ID, cascadeDelete: true)
-                .ForeignKey("dbo.Staffs", t => t.Customer_ID, cascadeDelete: true)
+                .ForeignKey("dbo.Customers", t => t.Customer_ID, cascadeDelete: true)
                 .Index(t => t.Address_ID)
                 .Index(t => t.Customer_ID);
             
@@ -118,7 +115,7 @@
                         Customer_ID = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Order_ID)
-                .ForeignKey("dbo.Staffs", t => t.Customer_ID, cascadeDelete: true)
+                .ForeignKey("dbo.Customers", t => t.Customer_ID, cascadeDelete: true)
                 .Index(t => t.Customer_ID);
             
             CreateTable(
@@ -130,22 +127,36 @@
                         Customer_ID = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.PhoneNumber_ID)
-                .ForeignKey("dbo.Staffs", t => t.Customer_ID, cascadeDelete: true)
+                .ForeignKey("dbo.Customers", t => t.Customer_ID, cascadeDelete: true)
+                .Index(t => t.Customer_ID);
+            
+            CreateTable(
+                "dbo.Staffs",
+                c => new
+                    {
+                        Customer_ID = c.Int(nullable: false),
+                        Staff_FirsDayOfWork = c.DateTime(nullable: false),
+                        Staff_Posistion = c.String(nullable: false, maxLength: 20),
+                    })
+                .PrimaryKey(t => t.Customer_ID)
+                .ForeignKey("dbo.Customers", t => t.Customer_ID)
                 .Index(t => t.Customer_ID);
             
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.PhoneNumber", "Customer_ID", "dbo.Staffs");
+            DropForeignKey("dbo.Staffs", "Customer_ID", "dbo.Customers");
+            DropForeignKey("dbo.PhoneNumber", "Customer_ID", "dbo.Customers");
             DropForeignKey("dbo.OrderDetails", "Phone_ID", "dbo.Phone");
             DropForeignKey("dbo.OrderDetails", "Order_ID", "dbo.Orders");
-            DropForeignKey("dbo.Orders", "Customer_ID", "dbo.Staffs");
+            DropForeignKey("dbo.Orders", "Customer_ID", "dbo.Customers");
             DropForeignKey("dbo.Images", "Phone_ID", "dbo.Phone");
             DropForeignKey("dbo.Phone", "Manufacturer_ID", "dbo.Manufacturers");
-            DropForeignKey("dbo.AddressOfCustomers", "Customer_ID", "dbo.Staffs");
+            DropForeignKey("dbo.AddressOfCustomers", "Customer_ID", "dbo.Customers");
             DropForeignKey("dbo.AddressOfCustomers", "Address_ID", "dbo.Addresses");
-            DropForeignKey("dbo.Accounts", "Customer_ID", "dbo.Staffs");
+            DropForeignKey("dbo.Accounts", "Customer_ID", "dbo.Customers");
+            DropIndex("dbo.Staffs", new[] { "Customer_ID" });
             DropIndex("dbo.PhoneNumber", new[] { "Customer_ID" });
             DropIndex("dbo.Orders", new[] { "Customer_ID" });
             DropIndex("dbo.OrderDetails", new[] { "Order_ID" });
@@ -155,6 +166,7 @@
             DropIndex("dbo.AddressOfCustomers", new[] { "Customer_ID" });
             DropIndex("dbo.AddressOfCustomers", new[] { "Address_ID" });
             DropIndex("dbo.Accounts", new[] { "Customer_ID" });
+            DropTable("dbo.Staffs");
             DropTable("dbo.PhoneNumber");
             DropTable("dbo.Orders");
             DropTable("dbo.OrderDetails");
@@ -163,7 +175,7 @@
             DropTable("dbo.Images");
             DropTable("dbo.AddressOfCustomers");
             DropTable("dbo.Addresses");
-            DropTable("dbo.Staffs");
+            DropTable("dbo.Customers");
             DropTable("dbo.Accounts");
         }
     }
