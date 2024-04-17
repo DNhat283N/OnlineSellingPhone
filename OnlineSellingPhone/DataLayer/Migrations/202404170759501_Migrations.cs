@@ -12,7 +12,7 @@
                 c => new
                     {
                         Account_ID = c.Int(nullable: false, identity: true),
-                        Account_Username = c.String(nullable: false),
+                        Account_Username = c.String(nullable: false, maxLength: 15),
                         Account_Password = c.String(nullable: false),
                         Account_Email = c.String(nullable: false, maxLength: 30),
                         Customer_ID = c.Int(nullable: false),
@@ -20,6 +20,7 @@
                     })
                 .PrimaryKey(t => t.Account_ID)
                 .ForeignKey("dbo.Customers", t => t.Customer_ID, cascadeDelete: true)
+                .Index(t => t.Account_Username, unique: true)
                 .Index(t => t.Account_Email, unique: true)
                 .Index(t => t.Customer_ID);
             

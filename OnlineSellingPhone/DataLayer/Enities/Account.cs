@@ -16,14 +16,16 @@ namespace DataLayer.Enities
         public int Account_ID { get; set; }
         [Column]
         [Required]
+        [MaxLength(15), MinLength(3)]
+        [Index(IsUnique = true)]
         public string Account_Username  { get; set; }
         [Column]
         [Required]
         public string Account_Password { get; set; }
         [Column]
         [Required]
-        [Index(IsUnique = true)]
         [MaxLength(30), MinLength(5)]
+        [Index(IsUnique = true)]
         public string Account_Email { get; set; }
         [Column]
         [Required]
