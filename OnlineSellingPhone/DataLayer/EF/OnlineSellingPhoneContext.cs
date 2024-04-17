@@ -32,6 +32,10 @@ namespace DataLayer.EF
                 .Property(p => p.Customer_BirthDay)
                 .HasColumnType("Date");
 
+            modelBuilder.Entity<Account>()
+                .Property(p => p.Account_Username)
+                .HasColumnType("nvarchar");
+
             modelBuilder.Entity<Staff>().ToTable("Staffs");
             modelBuilder.Entity<Customer>().ToTable("Customers");
                 
