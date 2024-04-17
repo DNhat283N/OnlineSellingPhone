@@ -22,6 +22,11 @@ namespace DataLayer.Enities
         public string Account_Password { get; set; }
         [Column]
         [Required]
+        [Index(IsUnique = true)]
+        [MaxLength(30), MinLength(5)]
+        public string Account_Email { get; set; }
+        [Column]
+        [Required]
         public int Customer_ID { get; set; }
         [ForeignKey("Customer_ID")]
         public virtual Customer Customer { get; set; }
@@ -29,12 +34,13 @@ namespace DataLayer.Enities
         [Required]
         public UserRoleEnum Account_UserRoleEnum { get; set; } = UserRoleEnum.CUSTOMER;
 
-        public Account(string account_Username, string account_Password, int customer_ID, UserRoleEnum account_UserRoleEnum = UserRoleEnum.CUSTOMER)
+        public Account(string account_Username, string account_Password, string account_Email, int customer_ID, UserRoleEnum account_UserRoleEnum = UserRoleEnum.CUSTOMER)
         {
             Account_Username = account_Username;
             Account_Password = account_Password;
             Customer_ID = customer_ID;
             Account_UserRoleEnum = account_UserRoleEnum;
+            Account_Email = account_Email;
         }
     }
 }
