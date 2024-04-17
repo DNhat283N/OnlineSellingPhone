@@ -49,7 +49,7 @@ namespace BusinessLayer
         {
             using (OnlineSellingPhoneContext db = new OnlineSellingPhoneContext())
             {
-                Account account = new Account(username, password, email, customer_Id);
+                Account account = new Account(username.ToLower(), password, email.ToLower(), customer_Id);
             }
         }
 
@@ -63,7 +63,7 @@ namespace BusinessLayer
 
                 int customer_Id = customer.Customer_ID;
 
-                db.Accounts.Add(new Account(username.ToLower(), password, email, customer_Id));
+                db.Accounts.Add(new Account(username.ToLower(), password, email.ToLower(), customer_Id));
                 db.SaveChanges();
 
                 db.PhoneNumbers.Add(new PhoneNumber(phoneNumber, customer_Id));
@@ -79,6 +79,24 @@ namespace BusinessLayer
                 isAccountExist = db.Accounts.Any(acc => acc.Account_Username == username.ToLower());
             }
             return isAccountExist;
+        }
+
+        public static string EmailOfAccount(string username)
+        {
+            string email = "";
+            using (OnlineSellingPhoneContext db = new OnlineSellingPhoneContext())
+            {
+                if (IsExistAccount(username))
+                {
+                    var account = db.Accounts.FirstOrDefault(acc => acc.Account_Username == username.ToLower());
+
+                    if(account != null)
+                    {
+                        email = account.Account_Email;
+                    }
+                }
+            }
+            return email;
         }
     }
 }
