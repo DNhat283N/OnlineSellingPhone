@@ -16,22 +16,24 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-        private Timer timer;
-        private int panelWidth;
-        private int slideSpeed = 10;
+        //private Timer timer;
+        //private int panelWidth;
+        //private int slideSpeed = 10;
         int currentImageIndex = 0;
 
 
         string[] imagePaths = new string[]
         {
-            "D:\\OnlineSellingPhone_DatabaseCoding_BigAssignment-main\\OnlineSellingPhone\\Image\\Banner_IP15.PNG",
-            "D:\\OnlineSellingPhone_DatabaseCoding_BigAssignment-main\\OnlineSellingPhone\\Image\\Banner_SSA55.PNG",
-            "D:\\OnlineSellingPhone_DatabaseCoding_BigAssignment-main\\OnlineSellingPhone\\Image\\Banner_Realme_C65.PNG",
-            "D:\\OnlineSellingPhone_DatabaseCoding_BigAssignment-main\\OnlineSellingPhone\\Image\\Banner_OppoReno11F.PNG"
+            @"D:\OnlineSellingPhone_DatabaseCoding_BigAssignment\OnlineSellingPhone\Image\0.PNG",
+            "D:\\OnlineSellingPhone_DatabaseCoding_BigAssignment\\OnlineSellingPhone\\Image\\1.PNG",
+            "D:\\OnlineSellingPhone_DatabaseCoding_BigAssignment\\OnlineSellingPhone\\Image\\2.PNG",
+            "D:\\OnlineSellingPhone_DatabaseCoding_BigAssignment\\OnlineSellingPhone\\Image\\3.PNG"
         };
+        
         private void LoadImage()
         {
             pcbImageBanner2.Image = Image.FromFile(imagePaths[currentImageIndex]);
+
         }
 
         private void btnBanner2Previous_Click(object sender, EventArgs e)

@@ -95,5 +95,17 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void lbllkForgetPw_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (!Form1.Instance.PnlContainer.Controls.ContainsKey("Account_ForgetPw"))
+            {
+                Account_ForgetPw AForgetPw = new Account_ForgetPw();
+                AForgetPw.Dock = DockStyle.Fill;
+                Form1.Instance.PnlContainer.Controls.Add(AForgetPw);
+            }
+            Form1.Instance.PnlContainer.Controls["Account_ForgetPw"].BringToFront();
+            Form1.Instance.BackButton.Visible = true;
+        }
     }
 }

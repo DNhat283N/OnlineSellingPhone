@@ -39,6 +39,7 @@ namespace WindowsFormsApp1
             this.lblNoPassword = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lbllkSignup = new System.Windows.Forms.LinkLabel();
+            this.lbllkForgetPw = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label1
@@ -163,10 +164,25 @@ namespace WindowsFormsApp1
             this.lbllkSignup.Text = "Đăng kí";
             this.lbllkSignup.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbllkSignup_LinkClicked);
             // 
+            // lbllkForgetPw
+            // 
+            this.lbllkForgetPw.AutoSize = true;
+            this.lbllkForgetPw.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.lbllkForgetPw.LinkColor = System.Drawing.Color.Black;
+            this.lbllkForgetPw.Location = new System.Drawing.Point(640, 270);
+            this.lbllkForgetPw.Margin = new System.Windows.Forms.Padding(0);
+            this.lbllkForgetPw.Name = "lbllkForgetPw";
+            this.lbllkForgetPw.Size = new System.Drawing.Size(155, 21);
+            this.lbllkForgetPw.TabIndex = 12;
+            this.lbllkForgetPw.TabStop = true;
+            this.lbllkForgetPw.Text = "Quên mật khẩu ? ";
+            this.lbllkForgetPw.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lbllkForgetPw_LinkClicked);
+            // 
             // Account_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lbllkForgetPw);
             this.Controls.Add(this.lbllkSignup);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblNoPassword);
@@ -199,5 +215,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label lblNoPassword;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.LinkLabel lbllkSignup;
+        private System.Windows.Forms.LinkLabel lbllkForgetPw;
     }
 }

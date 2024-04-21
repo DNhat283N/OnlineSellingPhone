@@ -99,13 +99,37 @@ namespace WindowsFormsApp1
             get { return btnBack; }
             set { btnBack = value; }
         }
+
         private void btnBack_Click(object sender, EventArgs e)
         {
+            ResetControls(this.Controls);
             panelContainer.Controls["Account_Login"].BringToFront();
             btnBack.Visible = false;
         }
+        private void ResetControls(Control.ControlCollection controls)
+        {
+            foreach (Control control in controls)
+            {
+                if (control is TextBox)
+                {
+                    ((TextBox)control).Text = ""; // Đặt giá trị của TextBox thành chuỗi rỗng
+                }
+                else if (control is DateTimePicker)
+                {
+                    ((DateTimePicker)control).Value = DateTime.Now; // Đặt giá trị của DateTimePicker thành giá trị mặc định
+                }
+                else if (control is RadioButton)
+                {
+                    ((RadioButton)control).Checked = false; // Bỏ chọn tất cả các RadioButton
+                }
+                else if (control.HasChildren) // Nếu control có các control con, đệ quy gọi ResetControls
+                {
+                    ResetControls(control.Controls);
+                }
+            }
+        }
 
-        private void panelContainer_ControlAdded(object sender, ControlEventArgs e)
+                private void panelContainer_ControlAdded(object sender, ControlEventArgs e)
         {
             btnBack.Visible = false;
         }

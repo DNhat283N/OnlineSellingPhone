@@ -11,6 +11,11 @@ namespace DataLayer.Enities
     [Table("Accounts")]
     public class Account
     {
+        public Account()
+        {
+
+        }
+
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Account_ID { get; set; }
@@ -21,6 +26,7 @@ namespace DataLayer.Enities
         public string Account_Username  { get; set; }
         [Column]
         [Required]
+        
         public string Account_Password { get; set; }
         [Column]
         [Required]
