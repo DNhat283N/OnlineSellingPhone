@@ -105,6 +105,7 @@ namespace BusinessLayer
                     var account = db.Accounts.FirstOrDefault(acc => acc.Account_Username == username.ToLower());
                     account.Account_Password = password;
                     isReseted = true;
+                    db.SaveChanges();
                 }
                 else
                 {

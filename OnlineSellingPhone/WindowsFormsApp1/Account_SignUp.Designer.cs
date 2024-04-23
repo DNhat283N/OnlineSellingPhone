@@ -53,8 +53,8 @@ namespace WindowsFormsApp1
             this.lblNoEmail = new System.Windows.Forms.Label();
             this.lblNoDateOfBirth = new System.Windows.Forms.Label();
             this.lblNoGender = new System.Windows.Forms.Label();
-            this.grbGender = new System.Windows.Forms.GroupBox();
-            this.grbGender.SuspendLayout();
+            this.pnlGender = new System.Windows.Forms.Panel();
+            this.pnlGender.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblNoPassword
@@ -86,7 +86,7 @@ namespace WindowsFormsApp1
             this.lblNoPhonenumber.AutoSize = true;
             this.lblNoPhonenumber.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNoPhonenumber.ForeColor = System.Drawing.Color.Red;
-            this.lblNoPhonenumber.Location = new System.Drawing.Point(529, 260);
+            this.lblNoPhonenumber.Location = new System.Drawing.Point(528, 250);
             this.lblNoPhonenumber.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNoPhonenumber.Name = "lblNoPhonenumber";
             this.lblNoPhonenumber.Size = new System.Drawing.Size(202, 17);
@@ -98,7 +98,7 @@ namespace WindowsFormsApp1
             this.lblNoName.AutoSize = true;
             this.lblNoName.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNoName.ForeColor = System.Drawing.Color.Red;
-            this.lblNoName.Location = new System.Drawing.Point(529, 150);
+            this.lblNoName.Location = new System.Drawing.Point(528, 140);
             this.lblNoName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNoName.Name = "lblNoName";
             this.lblNoName.Size = new System.Drawing.Size(140, 17);
@@ -112,7 +112,7 @@ namespace WindowsFormsApp1
             this.btnSignUp.Margin = new System.Windows.Forms.Padding(2);
             this.btnSignUp.Name = "btnSignUp";
             this.btnSignUp.Size = new System.Drawing.Size(214, 51);
-            this.btnSignUp.TabIndex = 36;
+            this.btnSignUp.TabIndex = 38;
             this.btnSignUp.Text = "Đăng kí";
             this.btnSignUp.UseVisualStyleBackColor = true;
             this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
@@ -120,10 +120,10 @@ namespace WindowsFormsApp1
             // dtpBirthdate
             // 
             this.dtpBirthdate.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpBirthdate.Location = new System.Drawing.Point(476, 280);
+            this.dtpBirthdate.Location = new System.Drawing.Point(475, 270);
             this.dtpBirthdate.Name = "dtpBirthdate";
             this.dtpBirthdate.Size = new System.Drawing.Size(315, 32);
-            this.dtpBirthdate.TabIndex = 35;
+            this.dtpBirthdate.TabIndex = 34;
             this.dtpBirthdate.ValueChanged += new System.EventHandler(this.dtpBirthdate_ValueChanged);
             // 
             // txtPassword
@@ -132,7 +132,7 @@ namespace WindowsFormsApp1
             this.txtPassword.Location = new System.Drawing.Point(476, 436);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(315, 32);
-            this.txtPassword.TabIndex = 34;
+            this.txtPassword.TabIndex = 37;
             this.txtPassword.UseSystemPasswordChar = true;
             this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
@@ -142,25 +142,25 @@ namespace WindowsFormsApp1
             this.txtUsername.Location = new System.Drawing.Point(476, 379);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(315, 32);
-            this.txtUsername.TabIndex = 33;
+            this.txtUsername.TabIndex = 36;
             this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             this.txtUsername.Leave += new System.EventHandler(this.txtUsername_Leave);
             // 
             // txtPhoneNumber
             // 
             this.txtPhoneNumber.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhoneNumber.Location = new System.Drawing.Point(476, 225);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(475, 215);
             this.txtPhoneNumber.MaxLength = 10;
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(315, 32);
-            this.txtPhoneNumber.TabIndex = 32;
+            this.txtPhoneNumber.TabIndex = 33;
             this.txtPhoneNumber.TextChanged += new System.EventHandler(this.txtPhoneNumber_TextChanged);
             this.txtPhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhoneNumber_KeyPress);
             // 
             // txtFirstName
             // 
             this.txtFirstName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFirstName.Location = new System.Drawing.Point(476, 115);
+            this.txtFirstName.Location = new System.Drawing.Point(475, 105);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(315, 32);
             this.txtFirstName.TabIndex = 31;
@@ -170,7 +170,7 @@ namespace WindowsFormsApp1
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(310, 118);
+            this.label7.Location = new System.Drawing.Point(309, 108);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(43, 23);
@@ -181,7 +181,7 @@ namespace WindowsFormsApp1
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(310, 280);
+            this.label6.Location = new System.Drawing.Point(309, 270);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(104, 23);
@@ -192,7 +192,7 @@ namespace WindowsFormsApp1
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(311, 225);
+            this.label4.Location = new System.Drawing.Point(310, 215);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 23);
@@ -225,7 +225,7 @@ namespace WindowsFormsApp1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(515, 49);
+            this.label1.Location = new System.Drawing.Point(514, 39);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(140, 40);
@@ -236,7 +236,7 @@ namespace WindowsFormsApp1
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(310, 333);
+            this.label5.Location = new System.Drawing.Point(309, 323);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(84, 23);
@@ -246,10 +246,10 @@ namespace WindowsFormsApp1
             // rdbtnMale
             // 
             this.rdbtnMale.AutoSize = true;
-            this.rdbtnMale.Location = new System.Drawing.Point(39, 41);
+            this.rdbtnMale.Location = new System.Drawing.Point(3, 3);
             this.rdbtnMale.Name = "rdbtnMale";
             this.rdbtnMale.Size = new System.Drawing.Size(79, 27);
-            this.rdbtnMale.TabIndex = 43;
+            this.rdbtnMale.TabIndex = 35;
             this.rdbtnMale.TabStop = true;
             this.rdbtnMale.Text = "Nam";
             this.rdbtnMale.UseVisualStyleBackColor = true;
@@ -258,7 +258,7 @@ namespace WindowsFormsApp1
             // rdbtnFemale
             // 
             this.rdbtnFemale.AutoSize = true;
-            this.rdbtnFemale.Location = new System.Drawing.Point(163, 41);
+            this.rdbtnFemale.Location = new System.Drawing.Point(98, 3);
             this.rdbtnFemale.Name = "rdbtnFemale";
             this.rdbtnFemale.Size = new System.Drawing.Size(55, 27);
             this.rdbtnFemale.TabIndex = 44;
@@ -271,7 +271,7 @@ namespace WindowsFormsApp1
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(310, 173);
+            this.label8.Location = new System.Drawing.Point(309, 163);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(62, 23);
@@ -281,10 +281,10 @@ namespace WindowsFormsApp1
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(476, 170);
+            this.txtEmail.Location = new System.Drawing.Point(475, 160);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(315, 32);
-            this.txtEmail.TabIndex = 46;
+            this.txtEmail.TabIndex = 32;
             this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             this.txtEmail.Leave += new System.EventHandler(this.txtEmail_Leave);
             // 
@@ -293,7 +293,7 @@ namespace WindowsFormsApp1
             this.lblNoEmail.AutoSize = true;
             this.lblNoEmail.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNoEmail.ForeColor = System.Drawing.Color.Red;
-            this.lblNoEmail.Location = new System.Drawing.Point(529, 205);
+            this.lblNoEmail.Location = new System.Drawing.Point(528, 195);
             this.lblNoEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNoEmail.Name = "lblNoEmail";
             this.lblNoEmail.Size = new System.Drawing.Size(156, 17);
@@ -305,7 +305,7 @@ namespace WindowsFormsApp1
             this.lblNoDateOfBirth.AutoSize = true;
             this.lblNoDateOfBirth.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNoDateOfBirth.ForeColor = System.Drawing.Color.Red;
-            this.lblNoDateOfBirth.Location = new System.Drawing.Point(529, 315);
+            this.lblNoDateOfBirth.Location = new System.Drawing.Point(528, 305);
             this.lblNoDateOfBirth.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNoDateOfBirth.Name = "lblNoDateOfBirth";
             this.lblNoDateOfBirth.Size = new System.Drawing.Size(184, 17);
@@ -324,21 +324,21 @@ namespace WindowsFormsApp1
             this.lblNoGender.TabIndex = 49;
             this.lblNoGender.Text = "* Vui lòng chọn giới tính";
             // 
-            // grbGender
+            // pnlGender
             // 
-            this.grbGender.Controls.Add(this.rdbtnMale);
-            this.grbGender.Controls.Add(this.rdbtnFemale);
-            this.grbGender.Location = new System.Drawing.Point(828, 198);
-            this.grbGender.Name = "grbGender";
-            this.grbGender.Size = new System.Drawing.Size(327, 114);
-            this.grbGender.TabIndex = 50;
-            this.grbGender.TabStop = false;
+            this.pnlGender.BackColor = System.Drawing.Color.Transparent;
+            this.pnlGender.Controls.Add(this.rdbtnFemale);
+            this.pnlGender.Controls.Add(this.rdbtnMale);
+            this.pnlGender.Location = new System.Drawing.Point(493, 322);
+            this.pnlGender.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlGender.Name = "pnlGender";
+            this.pnlGender.Size = new System.Drawing.Size(204, 38);
+            this.pnlGender.TabIndex = 35;
             // 
             // Account_SignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.grbGender);
             this.Controls.Add(this.lblNoGender);
             this.Controls.Add(this.lblNoDateOfBirth);
             this.Controls.Add(this.lblNoEmail);
@@ -361,12 +361,13 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.pnlGender);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Account_SignUp";
             this.Size = new System.Drawing.Size(1158, 590);
-            this.grbGender.ResumeLayout(false);
-            this.grbGender.PerformLayout();
+            this.pnlGender.ResumeLayout(false);
+            this.pnlGender.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -398,6 +399,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label lblNoEmail;
         private System.Windows.Forms.Label lblNoDateOfBirth;
         private System.Windows.Forms.Label lblNoGender;
-        private System.Windows.Forms.GroupBox grbGender;
+        private System.Windows.Forms.Panel pnlGender;
     }
 }

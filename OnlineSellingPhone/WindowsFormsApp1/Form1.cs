@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
@@ -42,6 +43,8 @@ namespace WindowsFormsApp1
 
 
         Home FormHome = new Home();
+        Mall FormMall = new Mall();
+        Cart FormCart = new Cart();
         private void Form1_Load(object sender, EventArgs e)
         {
             //btnBack.Visible = false;
@@ -74,12 +77,18 @@ namespace WindowsFormsApp1
         {
             SidePanel.Height = btnMall.Height;
             SidePanel.Top = btnMall.Top;
+            FormHome.Dock = DockStyle.Fill;
+            panelContainer.Controls.Clear();
+            panelContainer.Controls.Add(FormMall);
         }
 
         private void btnCart_Click(object sender, EventArgs e)
         {
             SidePanel.Height = btnCart.Height;
             SidePanel.Top = btnCart.Top;
+            FormHome.Dock = DockStyle.Fill;
+            panelContainer.Controls.Clear();
+            panelContainer.Controls.Add(FormCart);
         }
 
         private void btnAccount_Click(object sender, EventArgs e)

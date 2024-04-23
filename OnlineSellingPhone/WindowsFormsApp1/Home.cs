@@ -62,9 +62,5 @@ namespace WindowsFormsApp1
             LoadImage();
         }
 
-        private void pcbImageBanner2_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

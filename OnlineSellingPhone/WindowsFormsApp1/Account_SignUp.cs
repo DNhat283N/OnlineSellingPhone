@@ -13,43 +13,24 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-
+        
 
         private void btnSignUp_Click(object sender, EventArgs e)
         {
-            //if (txtFirstName.Text == "")
-            //{
-            //    lblNoName.Visible = true;
-            //}
-            //if (txtPhoneNumber.Text == "")
-            //{
-            //    lblNoPhonenumber.Visible = true;
-            //}
-            //if (txtUsername.Text == "")
-            //{
-            //    lblNoUsername.Visible = true;
-            //}
-            //if (txtPassword.Text == "")
-            //{
-            //    lblNoPassword.Visible = true;
-            //}
-            //bool checkIsExistEmail = DAO.IsExistEmail(txtEmail.Text);
-            //bool checkIsExistAccount = DAO.IsExistAccount(txtUsername.Text.ToLower());
-            //if (checkIsExistEmail != true)
-            //{
-            //    lblNoEmail.Text = "Email đã được sử dụng cho 1 tài khoản khác";
-            //    lblNoEmail.Visible = true;
-            //}  
-            //if (checkIsExistAccount != true)
-            //{
-            //    lblNoUsername.Text = "Tài khoản đã tồn tại";
-            //    lblNoUsername.Visible = true;
-            //}    
+         
             if (lblNoName.Visible == false && lblNoEmail.Visible == false && lblNoPhonenumber.Visible == false && lblNoDateOfBirth.Visible == false && lblNoGender.Visible == false && lblNoUsername.Visible == false && lblNoPassword.Visible == false)
             {
                 
                 DAO.AddSignUpCustomerInformation(txtFirstName.Text, Gender, dtpBirthdate.Value, txtUsername.Text.ToLower(), txtPassword.Text, txtEmail.Text, txtPhoneNumber.Text);
                 MessageBox.Show("Đăng kí tài khoản thành công");
+                Form1.Instance.PnlContainer.Controls.Clear();
+                if (!Form1.Instance.PnlContainer.Controls.ContainsKey("Account_Login"))
+                {
+                    Account_Login ALogin = new Account_Login();
+                    ALogin.Dock = DockStyle.Fill;
+                    Form1.Instance.PnlContainer.Controls.Add(ALogin);
+                }
+                Form1.Instance.PnlContainer.Controls["Account_Login"].BringToFront();
             }
             else
             {
@@ -158,12 +139,12 @@ namespace WindowsFormsApp1
 
 
         //Gender
-
+        
         bool Gender;
         private void rdbtnMale_CheckedChanged(object sender, EventArgs e)
-        {
+        {   
             lblNoGender.Visible = false;
-            RadioButton selectedRadioButton = grbGender.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
+            RadioButton selectedRadioButton = pnlGender.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked);
             if (selectedRadioButton != null)
             {
                 if (selectedRadioButton.Text == "Nam")

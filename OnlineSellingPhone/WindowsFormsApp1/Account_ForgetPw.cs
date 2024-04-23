@@ -21,11 +21,37 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
+
+        //static Account_ForgetPw _obj;
+
+        //public static Account_ForgetPw Instance
+        //{
+        //    get
+        //    {
+        //        if (_obj == null)
+        //        {
+        //            _obj = new Account_ForgetPw();
+        //        }
+        //        return _obj;
+        //    }
+        //}
+
+        //public TextBox textBoxUsernameVerify
+        //{
+        //    get { return txtUsernameVerify; }
+        //    set { txtUsernameVerify = value; }
+        //}
+        string randomCode;
+        public static string to, usernameVerify;
+
+
+
         private void btnVerifyCode_Click(object sender, EventArgs e)
         {
             if (randomCode == (txtVerifyCode.Text).ToString())
             {
                 to = DAO.EmailOfAccount(txtUsernameVerify.Text);
+                usernameVerify = txtUsernameVerify.Text;
                 if (!Form1.Instance.PnlContainer.Controls.ContainsKey("Account_ResetPw"))
                 {
                     Account_ResetPw AResetpw = new Account_ResetPw();
@@ -44,8 +70,7 @@ namespace WindowsFormsApp1
         }
 
 
-        string randomCode;
-        public static string to;
+       
 
         private void btnSendEmailVerify_Click(object sender, EventArgs e)
         {
