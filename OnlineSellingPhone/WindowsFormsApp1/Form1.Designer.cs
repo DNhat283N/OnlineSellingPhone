@@ -63,7 +63,7 @@ namespace WindowsFormsApp1
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 660);
+            this.panel1.Size = new System.Drawing.Size(200, 678);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox1
@@ -170,7 +170,7 @@ namespace WindowsFormsApp1
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(200, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1155, 82);
+            this.panel2.Size = new System.Drawing.Size(1171, 82);
             this.panel2.TabIndex = 1;
             // 
             // btnBack
@@ -283,14 +283,14 @@ namespace WindowsFormsApp1
             this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContainer.Location = new System.Drawing.Point(200, 82);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(1155, 578);
+            this.panelContainer.Size = new System.Drawing.Size(1171, 596);
             this.panelContainer.TabIndex = 2;
             this.panelContainer.ControlAdded += new System.Windows.Forms.ControlEventHandler(this.panelContainer_ControlAdded);
             // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1355, 660);
+            this.ClientSize = new System.Drawing.Size(1371, 678);
             this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

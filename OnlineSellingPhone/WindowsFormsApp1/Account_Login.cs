@@ -39,7 +39,7 @@ namespace WindowsFormsApp1
             if (txtUsername.Text == "")
             {
                 txtUsername.Text = " Username";
-                txtUsername.ForeColor = Color.LightGray;
+                txtUsername.ForeColor = Color.DarkGray;
             }
         }
 
@@ -57,7 +57,7 @@ namespace WindowsFormsApp1
             if (txtPassword.Text == "")
             {
                 txtPassword.Text = " Password";
-                txtPassword.ForeColor = Color.LightGray;
+                txtPassword.ForeColor = Color.DarkGray;
             }
         }
 
@@ -91,9 +91,17 @@ namespace WindowsFormsApp1
             Form1.Instance.BackButton.Visible = true;
         }
 
-        private void txtUsername_TextChanged(object sender, EventArgs e)
-        {
 
+        private void lbllkForgetPw_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (!Form1.Instance.PnlContainer.Controls.ContainsKey("Account_ForgetPw"))
+            {
+                Account_ForgetPw AForgetPw = new Account_ForgetPw();
+                AForgetPw.Dock = DockStyle.Fill;
+                Form1.Instance.PnlContainer.Controls.Add(AForgetPw);
+            }
+            Form1.Instance.PnlContainer.Controls["Account_ForgetPw"].BringToFront();
+            Form1.Instance.BackButton.Visible = true;
         }
     }
 }

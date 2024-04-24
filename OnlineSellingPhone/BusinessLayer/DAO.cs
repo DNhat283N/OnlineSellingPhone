@@ -37,6 +37,23 @@ namespace BusinessLayer
         }
 
         //Sign Up form 
+        public static void InsertCustomer(string fname, DateTime birthday, bool gender)
+        {
+            using (OnlineSellingPhoneContext db = new OnlineSellingPhoneContext())
+            {
+                Customer customer = new Customer(fname, gender, birthday);
+                db.Customers.Add(customer);
+                db.SaveChanges();
+            }
+        }
+
+        public static void InsertAccount(int customer_Id, string username, string password, string email)
+        {
+            using (OnlineSellingPhoneContext db = new OnlineSellingPhoneContext())
+            {
+                Account account = new Account(username.ToLower(), password, email.ToLower(), customer_Id);
+            }
+        }
 
         public static void AddSignUpCustomerInformation(string fname, bool gender, DateTime birthday, string username, string password, string email, string phoneNumber)
         {
@@ -87,7 +104,9 @@ namespace BusinessLayer
                 {
                     var account = db.Accounts.FirstOrDefault(acc => acc.Account_Username == username.ToLower());
                     account.Account_Password = password;
+                    db.SaveChanges();
                     isReseted = true;
+                    db.SaveChanges();
                 }
                 else
                 {
