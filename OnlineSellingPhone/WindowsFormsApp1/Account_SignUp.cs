@@ -118,7 +118,7 @@ namespace WindowsFormsApp1
         private void txtPhoneNumber_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Kiểm tra xem ký tự được nhập có phải là số hay không
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '\b')
             {
                 // Nếu không phải là số, không cho phép ký tự được nhập vào TextBox
                 e.Handled = true;
