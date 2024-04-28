@@ -45,6 +45,8 @@ namespace WindowsFormsApp1
         Home FormHome = new Home();
         Mall FormMall = new Mall();
         Cart FormCart = new Cart();
+        Account_Login ALogin = new Account_Login();
+        Product_admin FormProductAdmin = new Product_admin();
         private void Form1_Load(object sender, EventArgs e)
         {
             //btnBack.Visible = false;
@@ -97,7 +99,6 @@ namespace WindowsFormsApp1
             SidePanel.Top = btnAccount.Top;
             btnBack.Visible = false;
             _obj = this;
-            Account_Login ALogin = new Account_Login();
             ALogin.Dock = DockStyle.Fill;
             panelContainer.Controls.Clear();
             panelContainer.Controls.Add(ALogin);
@@ -112,7 +113,15 @@ namespace WindowsFormsApp1
         private void btnBack_Click(object sender, EventArgs e)
         {
             ResetControls(this.Controls);
-            panelContainer.Controls["Account_Login"].BringToFront();
+            //if (panelContainer.Controls.ContainsKey("Product_admin"))
+            //{
+            //    panelContainer.Controls["Product_admin"].BringToFront();
+            //}
+            //else
+            //{
+                panelContainer.Controls["Account_Login"].BringToFront();
+
+            //}
             btnBack.Visible = false;
         }
         private void ResetControls(Control.ControlCollection controls)
@@ -138,9 +147,18 @@ namespace WindowsFormsApp1
             }
         }
 
-                private void panelContainer_ControlAdded(object sender, ControlEventArgs e)
+        private void panelContainer_ControlAdded(object sender, ControlEventArgs e)
         {
             btnBack.Visible = false;
+        }
+
+        private void btnProduct_admin_Click(object sender, EventArgs e)
+        {
+            SidePanel.Height = btnProduct_admin.Height;
+            SidePanel.Top = btnProduct_admin.Top;
+            FormProductAdmin.Dock = DockStyle.Fill;
+            panelContainer.Controls.Clear();
+            panelContainer.Controls.Add(FormProductAdmin);
         }
     }
 }
