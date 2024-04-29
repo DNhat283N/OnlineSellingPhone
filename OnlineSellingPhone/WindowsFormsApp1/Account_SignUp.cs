@@ -81,7 +81,7 @@ namespace WindowsFormsApp1
             }   
             if (txtEmail.Text == "")
             {
-                lblNoEmail.Text = "*Vui lòng nhập Email";
+                lblNoEmail.Text = "Vui lòng nhập Email";
             }    
 
         }
@@ -90,7 +90,7 @@ namespace WindowsFormsApp1
             bool checkIsExistEmail = DAO.IsExistEmail(txtEmail.Text);
             if (checkIsExistEmail == true)
             {
-                lblNoEmail.Text = "*Email đã được sử dụng cho 1 tài khoản khác";
+                lblNoEmail.Text = "Email đã được sử dụng cho 1 tài khoản khác";
                 lblNoEmail.Visible = true;
             }
         }
