@@ -30,143 +30,25 @@ namespace WindowsFormsApp1
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.mall_Product6 = new WindowsFormsApp1.Mall_Product();
-            this.mall_Product7 = new WindowsFormsApp1.Mall_Product();
-            this.mall_Product4 = new WindowsFormsApp1.Mall_Product();
-            this.mall_Product8 = new WindowsFormsApp1.Mall_Product();
-            this.mall_Product5 = new WindowsFormsApp1.Mall_Product();
-            this.mall_Product9 = new WindowsFormsApp1.Mall_Product();
-            this.mall_Product3 = new WindowsFormsApp1.Mall_Product();
-            this.mall_Product2 = new WindowsFormsApp1.Mall_Product();
-            this.mall_Product1 = new WindowsFormsApp1.Mall_Product();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnPricefilter = new WindowsFormsApp1.DSButton();
             this.btnSearch = new WindowsFormsApp1.DSButton();
-            this.btnSamsung = new WindowsFormsApp1.DSButton();
-            this.btnIphone = new WindowsFormsApp1.DSButton();
-            this.btnOppo = new WindowsFormsApp1.DSButton();
-            this.btnXiaomi = new WindowsFormsApp1.DSButton();
             this.btnRealme = new WindowsFormsApp1.DSButton();
-            this.panel1.SuspendLayout();
+            this.btnXiaomi = new WindowsFormsApp1.DSButton();
+            this.btnOppo = new WindowsFormsApp1.DSButton();
+            this.btnApple = new WindowsFormsApp1.DSButton();
+            this.btnSamsung = new WindowsFormsApp1.DSButton();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.mall_Product6);
-            this.panel1.Controls.Add(this.mall_Product7);
-            this.panel1.Controls.Add(this.mall_Product4);
-            this.panel1.Controls.Add(this.mall_Product8);
-            this.panel1.Controls.Add(this.mall_Product5);
-            this.panel1.Controls.Add(this.mall_Product9);
-            this.panel1.Controls.Add(this.mall_Product3);
-            this.panel1.Controls.Add(this.mall_Product2);
-            this.panel1.Controls.Add(this.mall_Product1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 153);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1171, 443);
             this.panel1.TabIndex = 31;
-            // 
-            // mall_Product6
-            // 
-            this.mall_Product6.AutoSize = true;
-            this.mall_Product6.BackColor = System.Drawing.Color.White;
-            this.mall_Product6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mall_Product6.Location = new System.Drawing.Point(28, 419);
-            this.mall_Product6.Margin = new System.Windows.Forms.Padding(4);
-            this.mall_Product6.Name = "mall_Product6";
-            this.mall_Product6.Size = new System.Drawing.Size(352, 346);
-            this.mall_Product6.TabIndex = 6;
-            // 
-            // mall_Product7
-            // 
-            this.mall_Product7.AutoSize = true;
-            this.mall_Product7.BackColor = System.Drawing.Color.White;
-            this.mall_Product7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mall_Product7.Location = new System.Drawing.Point(779, 819);
-            this.mall_Product7.Margin = new System.Windows.Forms.Padding(4);
-            this.mall_Product7.Name = "mall_Product7";
-            this.mall_Product7.Size = new System.Drawing.Size(352, 346);
-            this.mall_Product7.TabIndex = 5;
-            // 
-            // mall_Product4
-            // 
-            this.mall_Product4.AutoSize = true;
-            this.mall_Product4.BackColor = System.Drawing.Color.White;
-            this.mall_Product4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mall_Product4.Location = new System.Drawing.Point(779, 419);
-            this.mall_Product4.Margin = new System.Windows.Forms.Padding(4);
-            this.mall_Product4.Name = "mall_Product4";
-            this.mall_Product4.Size = new System.Drawing.Size(352, 346);
-            this.mall_Product4.TabIndex = 5;
-            // 
-            // mall_Product8
-            // 
-            this.mall_Product8.AutoSize = true;
-            this.mall_Product8.BackColor = System.Drawing.Color.White;
-            this.mall_Product8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mall_Product8.Location = new System.Drawing.Point(406, 819);
-            this.mall_Product8.Margin = new System.Windows.Forms.Padding(4);
-            this.mall_Product8.Name = "mall_Product8";
-            this.mall_Product8.Size = new System.Drawing.Size(352, 346);
-            this.mall_Product8.TabIndex = 4;
-            // 
-            // mall_Product5
-            // 
-            this.mall_Product5.AutoSize = true;
-            this.mall_Product5.BackColor = System.Drawing.Color.White;
-            this.mall_Product5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mall_Product5.Location = new System.Drawing.Point(406, 419);
-            this.mall_Product5.Margin = new System.Windows.Forms.Padding(4);
-            this.mall_Product5.Name = "mall_Product5";
-            this.mall_Product5.Size = new System.Drawing.Size(352, 346);
-            this.mall_Product5.TabIndex = 4;
-            // 
-            // mall_Product9
-            // 
-            this.mall_Product9.AutoSize = true;
-            this.mall_Product9.BackColor = System.Drawing.Color.White;
-            this.mall_Product9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mall_Product9.Location = new System.Drawing.Point(28, 819);
-            this.mall_Product9.Margin = new System.Windows.Forms.Padding(4);
-            this.mall_Product9.Name = "mall_Product9";
-            this.mall_Product9.Size = new System.Drawing.Size(352, 346);
-            this.mall_Product9.TabIndex = 3;
-            // 
-            // mall_Product3
-            // 
-            this.mall_Product3.AutoSize = true;
-            this.mall_Product3.BackColor = System.Drawing.Color.White;
-            this.mall_Product3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mall_Product3.Location = new System.Drawing.Point(779, 27);
-            this.mall_Product3.Margin = new System.Windows.Forms.Padding(4);
-            this.mall_Product3.Name = "mall_Product3";
-            this.mall_Product3.Size = new System.Drawing.Size(352, 346);
-            this.mall_Product3.TabIndex = 2;
-            // 
-            // mall_Product2
-            // 
-            this.mall_Product2.AutoSize = true;
-            this.mall_Product2.BackColor = System.Drawing.Color.White;
-            this.mall_Product2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mall_Product2.Location = new System.Drawing.Point(406, 27);
-            this.mall_Product2.Margin = new System.Windows.Forms.Padding(4);
-            this.mall_Product2.Name = "mall_Product2";
-            this.mall_Product2.Size = new System.Drawing.Size(352, 346);
-            this.mall_Product2.TabIndex = 1;
-            // 
-            // mall_Product1
-            // 
-            this.mall_Product1.AutoSize = true;
-            this.mall_Product1.BackColor = System.Drawing.Color.White;
-            this.mall_Product1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mall_Product1.Location = new System.Drawing.Point(28, 27);
-            this.mall_Product1.Margin = new System.Windows.Forms.Padding(4);
-            this.mall_Product1.Name = "mall_Product1";
-            this.mall_Product1.Size = new System.Drawing.Size(352, 346);
-            this.mall_Product1.TabIndex = 0;
             // 
             // txtSearch
             // 
@@ -176,7 +58,7 @@ namespace WindowsFormsApp1
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(377, 36);
             this.txtSearch.TabIndex = 27;
-            this.txtSearch.Text = " Tìm kiếm";
+            this.txtSearch.Text = "Tìm kiếm";
             this.txtSearch.Enter += new System.EventHandler(this.txtSearch_Enter);
             this.txtSearch.Leave += new System.EventHandler(this.txtSearch_Leave);
             // 
@@ -219,68 +101,25 @@ namespace WindowsFormsApp1
             this.btnSearch.TextColor = System.Drawing.Color.Black;
             this.btnSearch.UseVisualStyleBackColor = false;
             // 
-            // btnSamsung
+            // btnRealme
             // 
-            this.btnSamsung.BackColor = System.Drawing.Color.White;
-            this.btnSamsung.BackgroundColor = System.Drawing.Color.White;
-            this.btnSamsung.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSamsung.BorderRadius = 20;
-            this.btnSamsung.BorderSize = 1;
-            this.btnSamsung.FlatAppearance.BorderSize = 0;
-            this.btnSamsung.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSamsung.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSamsung.ForeColor = System.Drawing.Color.Black;
-            this.btnSamsung.Location = new System.Drawing.Point(125, 76);
-            this.btnSamsung.Name = "btnSamsung";
-            this.btnSamsung.Size = new System.Drawing.Size(159, 50);
-            this.btnSamsung.TabIndex = 35;
-            this.btnSamsung.Tag = "Product";
-            this.btnSamsung.Text = "SAMSUNG";
-            this.btnSamsung.TextColor = System.Drawing.Color.Black;
-            this.btnSamsung.UseVisualStyleBackColor = false;
-            this.btnSamsung.Click += new System.EventHandler(this.btnSamsung_Click);
-            // 
-            // btnIphone
-            // 
-            this.btnIphone.BackColor = System.Drawing.Color.White;
-            this.btnIphone.BackgroundColor = System.Drawing.Color.White;
-            this.btnIphone.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnIphone.BorderRadius = 20;
-            this.btnIphone.BorderSize = 1;
-            this.btnIphone.FlatAppearance.BorderSize = 0;
-            this.btnIphone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIphone.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIphone.ForeColor = System.Drawing.Color.Black;
-            this.btnIphone.Location = new System.Drawing.Point(304, 76);
-            this.btnIphone.Name = "btnIphone";
-            this.btnIphone.Size = new System.Drawing.Size(159, 50);
-            this.btnIphone.TabIndex = 36;
-            this.btnIphone.Tag = "Product";
-            this.btnIphone.Text = "iPhone";
-            this.btnIphone.TextColor = System.Drawing.Color.Black;
-            this.btnIphone.UseVisualStyleBackColor = false;
-            this.btnIphone.Click += new System.EventHandler(this.btnIphone_Click);
-            // 
-            // btnOppo
-            // 
-            this.btnOppo.BackColor = System.Drawing.Color.White;
-            this.btnOppo.BackgroundColor = System.Drawing.Color.White;
-            this.btnOppo.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnOppo.BorderRadius = 20;
-            this.btnOppo.BorderSize = 1;
-            this.btnOppo.FlatAppearance.BorderSize = 0;
-            this.btnOppo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOppo.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOppo.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnOppo.Location = new System.Drawing.Point(480, 76);
-            this.btnOppo.Name = "btnOppo";
-            this.btnOppo.Size = new System.Drawing.Size(159, 50);
-            this.btnOppo.TabIndex = 37;
-            this.btnOppo.Tag = "Product";
-            this.btnOppo.Text = "oppo";
-            this.btnOppo.TextColor = System.Drawing.Color.SeaGreen;
-            this.btnOppo.UseVisualStyleBackColor = false;
-            this.btnOppo.Click += new System.EventHandler(this.btnOppo_Click);
+            this.btnRealme.BackColor = System.Drawing.Color.White;
+            this.btnRealme.BackgroundColor = System.Drawing.Color.White;
+            this.btnRealme.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRealme.BorderRadius = 20;
+            this.btnRealme.BorderSize = 1;
+            this.btnRealme.FlatAppearance.BorderSize = 0;
+            this.btnRealme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRealme.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRealme.ForeColor = System.Drawing.Color.Black;
+            this.btnRealme.Location = new System.Drawing.Point(847, 76);
+            this.btnRealme.Name = "btnRealme";
+            this.btnRealme.Size = new System.Drawing.Size(159, 50);
+            this.btnRealme.TabIndex = 39;
+            this.btnRealme.Text = "realme";
+            this.btnRealme.TextColor = System.Drawing.Color.Black;
+            this.btnRealme.UseVisualStyleBackColor = false;
+            this.btnRealme.Click += new System.EventHandler(this.btnClickEvent);
             // 
             // btnXiaomi
             // 
@@ -301,27 +140,70 @@ namespace WindowsFormsApp1
             this.btnXiaomi.Text = "xiaomi";
             this.btnXiaomi.TextColor = System.Drawing.Color.Black;
             this.btnXiaomi.UseVisualStyleBackColor = false;
-            this.btnXiaomi.Click += new System.EventHandler(this.btnXiaomi_Click);
+            this.btnXiaomi.Click += new System.EventHandler(this.btnClickEvent);
             // 
-            // btnRealme
+            // btnOppo
             // 
-            this.btnRealme.BackColor = System.Drawing.Color.White;
-            this.btnRealme.BackgroundColor = System.Drawing.Color.White;
-            this.btnRealme.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnRealme.BorderRadius = 20;
-            this.btnRealme.BorderSize = 1;
-            this.btnRealme.FlatAppearance.BorderSize = 0;
-            this.btnRealme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRealme.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRealme.ForeColor = System.Drawing.Color.Black;
-            this.btnRealme.Location = new System.Drawing.Point(847, 76);
-            this.btnRealme.Name = "btnRealme";
-            this.btnRealme.Size = new System.Drawing.Size(159, 50);
-            this.btnRealme.TabIndex = 39;
-            this.btnRealme.Text = "realme";
-            this.btnRealme.TextColor = System.Drawing.Color.Black;
-            this.btnRealme.UseVisualStyleBackColor = false;
-            this.btnRealme.Click += new System.EventHandler(this.btnRealme_Click);
+            this.btnOppo.BackColor = System.Drawing.Color.White;
+            this.btnOppo.BackgroundColor = System.Drawing.Color.White;
+            this.btnOppo.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnOppo.BorderRadius = 20;
+            this.btnOppo.BorderSize = 1;
+            this.btnOppo.FlatAppearance.BorderSize = 0;
+            this.btnOppo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOppo.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOppo.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnOppo.Location = new System.Drawing.Point(480, 76);
+            this.btnOppo.Name = "btnOppo";
+            this.btnOppo.Size = new System.Drawing.Size(159, 50);
+            this.btnOppo.TabIndex = 37;
+            this.btnOppo.Tag = "Product";
+            this.btnOppo.Text = "oppo";
+            this.btnOppo.TextColor = System.Drawing.Color.SeaGreen;
+            this.btnOppo.UseVisualStyleBackColor = false;
+            this.btnOppo.Click += new System.EventHandler(this.btnClickEvent);
+            // 
+            // btnApple
+            // 
+            this.btnApple.BackColor = System.Drawing.Color.White;
+            this.btnApple.BackgroundColor = System.Drawing.Color.White;
+            this.btnApple.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnApple.BorderRadius = 20;
+            this.btnApple.BorderSize = 1;
+            this.btnApple.FlatAppearance.BorderSize = 0;
+            this.btnApple.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnApple.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnApple.ForeColor = System.Drawing.Color.Black;
+            this.btnApple.Location = new System.Drawing.Point(304, 76);
+            this.btnApple.Name = "btnApple";
+            this.btnApple.Size = new System.Drawing.Size(159, 50);
+            this.btnApple.TabIndex = 36;
+            this.btnApple.Tag = "Product";
+            this.btnApple.Text = "Apple";
+            this.btnApple.TextColor = System.Drawing.Color.Black;
+            this.btnApple.UseVisualStyleBackColor = false;
+            this.btnApple.Click += new System.EventHandler(this.btnClickEvent);
+            // 
+            // btnSamsung
+            // 
+            this.btnSamsung.BackColor = System.Drawing.Color.White;
+            this.btnSamsung.BackgroundColor = System.Drawing.Color.White;
+            this.btnSamsung.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSamsung.BorderRadius = 20;
+            this.btnSamsung.BorderSize = 1;
+            this.btnSamsung.FlatAppearance.BorderSize = 0;
+            this.btnSamsung.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSamsung.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSamsung.ForeColor = System.Drawing.Color.Black;
+            this.btnSamsung.Location = new System.Drawing.Point(125, 76);
+            this.btnSamsung.Name = "btnSamsung";
+            this.btnSamsung.Size = new System.Drawing.Size(159, 50);
+            this.btnSamsung.TabIndex = 35;
+            this.btnSamsung.Tag = "Product";
+            this.btnSamsung.Text = "SAMSUNG";
+            this.btnSamsung.TextColor = System.Drawing.Color.Black;
+            this.btnSamsung.UseVisualStyleBackColor = false;
+            this.btnSamsung.Click += new System.EventHandler(this.btnClickEvent);
             // 
             // Mall
             // 
@@ -332,7 +214,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.btnRealme);
             this.Controls.Add(this.btnXiaomi);
             this.Controls.Add(this.btnOppo);
-            this.Controls.Add(this.btnIphone);
+            this.Controls.Add(this.btnApple);
             this.Controls.Add(this.btnSamsung);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtSearch);
@@ -340,8 +222,7 @@ namespace WindowsFormsApp1
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Mall";
             this.Size = new System.Drawing.Size(1171, 596);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Load += new System.EventHandler(this.Mall_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -350,20 +231,11 @@ namespace WindowsFormsApp1
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private Mall_Product mall_Product6;
-        private Mall_Product mall_Product7;
-        private Mall_Product mall_Product4;
-        private Mall_Product mall_Product8;
-        private Mall_Product mall_Product5;
-        private Mall_Product mall_Product9;
-        private Mall_Product mall_Product3;
-        private Mall_Product mall_Product2;
-        private Mall_Product mall_Product1;
         private System.Windows.Forms.TextBox txtSearch;
         private DSButton btnSearch;
         private DSButton btnPricefilter;
         private DSButton btnSamsung;
-        private DSButton btnIphone;
+        private DSButton btnApple;
         private DSButton btnOppo;
         private DSButton btnXiaomi;
         private DSButton btnRealme;

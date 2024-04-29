@@ -55,6 +55,8 @@ namespace WindowsFormsApp1
             _obj = this;
             FormHome.Dock = DockStyle.Fill;
             panelContainer.Controls.Add(FormHome);
+            panelContainer.Controls.Add(FormMall);
+            
         }
 
 
