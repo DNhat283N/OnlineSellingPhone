@@ -31,6 +31,7 @@ namespace WindowsFormsApp1
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnProduct_admin = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.SidePanel = new System.Windows.Forms.Panel();
             this.btnAccount = new System.Windows.Forms.Button();
@@ -54,6 +55,7 @@ namespace WindowsFormsApp1
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.panel1.Controls.Add(this.btnProduct_admin);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.SidePanel);
             this.panel1.Controls.Add(this.btnAccount);
@@ -65,6 +67,24 @@ namespace WindowsFormsApp1
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 678);
             this.panel1.TabIndex = 0;
+            // 
+            // btnProduct_admin
+            // 
+            this.btnProduct_admin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnProduct_admin.FlatAppearance.BorderSize = 0;
+            this.btnProduct_admin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProduct_admin.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProduct_admin.ForeColor = System.Drawing.Color.White;
+            this.btnProduct_admin.Image = ((System.Drawing.Image)(resources.GetObject("btnProduct_admin.Image")));
+            this.btnProduct_admin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProduct_admin.Location = new System.Drawing.Point(9, 518);
+            this.btnProduct_admin.Name = "btnProduct_admin";
+            this.btnProduct_admin.Size = new System.Drawing.Size(188, 54);
+            this.btnProduct_admin.TabIndex = 4;
+            this.btnProduct_admin.Text = "     Product";
+            this.btnProduct_admin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnProduct_admin.UseVisualStyleBackColor = true;
+            this.btnProduct_admin.Click += new System.EventHandler(this.btnProduct_admin_Click);
             // 
             // pictureBox1
             // 
@@ -325,6 +345,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button btnFaceBook;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Panel panelContainer;
+        private System.Windows.Forms.Button btnProduct_admin;
     }
 }
 

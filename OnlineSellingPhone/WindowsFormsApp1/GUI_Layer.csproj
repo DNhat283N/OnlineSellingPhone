@@ -108,6 +108,18 @@
     <Compile Include="Mall_Product.Designer.cs">
       <DependentUpon>Mall_Product.cs</DependentUpon>
     </Compile>
+    <Compile Include="Product_add_admin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Product_add_admin.Designer.cs">
+      <DependentUpon>Product_add_admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product_admin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Product_admin.Designer.cs">
+      <DependentUpon>Product_admin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Account_Login.cs">
@@ -142,6 +154,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mall_Product.resx">
       <DependentUpon>Mall_Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product_add_admin.resx">
+      <DependentUpon>Product_add_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product_admin.resx">
+      <DependentUpon>Product_admin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

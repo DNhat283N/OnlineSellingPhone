@@ -30,6 +30,16 @@ namespace WindowsFormsApp1
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlProduct = new System.Windows.Forms.Panel();
+            this.mall_Product6 = new WindowsFormsApp1.Mall_Product();
+            this.mall_Product7 = new WindowsFormsApp1.Mall_Product();
+            this.mall_Product4 = new WindowsFormsApp1.Mall_Product();
+            this.mall_Product8 = new WindowsFormsApp1.Mall_Product();
+            this.mall_Product5 = new WindowsFormsApp1.Mall_Product();
+            this.mall_Product9 = new WindowsFormsApp1.Mall_Product();
+            this.mall_Product3 = new WindowsFormsApp1.Mall_Product();
+            this.mall_Product2 = new WindowsFormsApp1.Mall_Product();
+            this.mall_Product1 = new WindowsFormsApp1.Mall_Product();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnPricefilter = new WindowsFormsApp1.DSButton();
             this.btnSearch = new WindowsFormsApp1.DSButton();
@@ -38,9 +48,10 @@ namespace WindowsFormsApp1
             this.btnOppo = new WindowsFormsApp1.DSButton();
             this.btnApple = new WindowsFormsApp1.DSButton();
             this.btnSamsung = new WindowsFormsApp1.DSButton();
+            this.pnlProduct.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnlProduct
             // 
             this.panel1.AutoScroll = true;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -49,6 +60,22 @@ namespace WindowsFormsApp1
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1171, 443);
             this.panel1.TabIndex = 31;
+            this.pnlProduct.AutoScroll = true;
+            this.pnlProduct.Controls.Add(this.mall_Product6);
+            this.pnlProduct.Controls.Add(this.mall_Product7);
+            this.pnlProduct.Controls.Add(this.mall_Product4);
+            this.pnlProduct.Controls.Add(this.mall_Product8);
+            this.pnlProduct.Controls.Add(this.mall_Product5);
+            this.pnlProduct.Controls.Add(this.mall_Product9);
+            this.pnlProduct.Controls.Add(this.mall_Product3);
+            this.pnlProduct.Controls.Add(this.mall_Product2);
+            this.pnlProduct.Controls.Add(this.mall_Product1);
+            this.pnlProduct.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlProduct.Location = new System.Drawing.Point(0, 153);
+            this.pnlProduct.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlProduct.Name = "pnlProduct";
+            this.pnlProduct.Size = new System.Drawing.Size(1171, 443);
+            this.pnlProduct.TabIndex = 31;
             // 
             // txtSearch
             // 
@@ -93,7 +120,7 @@ namespace WindowsFormsApp1
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.Black;
-            this.btnSearch.Location = new System.Drawing.Point(747, 12);
+            this.btnSearch.Location = new System.Drawing.Point(749, 16);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(159, 50);
             this.btnSearch.TabIndex = 40;
@@ -216,13 +243,14 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.btnOppo);
             this.Controls.Add(this.btnApple);
             this.Controls.Add(this.btnSamsung);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtSearch);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Mall";
             this.Size = new System.Drawing.Size(1171, 596);
             this.Load += new System.EventHandler(this.Mall_Load);
+            this.pnlProduct.ResumeLayout(false);
+            this.pnlProduct.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,6 +259,16 @@ namespace WindowsFormsApp1
         #endregion
 
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlProduct;
+        private Mall_Product mall_Product6;
+        private Mall_Product mall_Product7;
+        private Mall_Product mall_Product4;
+        private Mall_Product mall_Product8;
+        private Mall_Product mall_Product5;
+        private Mall_Product mall_Product9;
+        private Mall_Product mall_Product3;
+        private Mall_Product mall_Product2;
+        private Mall_Product mall_Product1;
         private System.Windows.Forms.TextBox txtSearch;
         private DSButton btnSearch;
         private DSButton btnPricefilter;
