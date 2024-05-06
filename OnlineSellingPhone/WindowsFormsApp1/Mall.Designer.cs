@@ -29,8 +29,17 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.pnlProduct = new System.Windows.Forms.Panel();
+            this.lblClearSearch = new System.Windows.Forms.Label();
+            this.lsbSuggestions = new System.Windows.Forms.ListBox();
+            this.btnPricefilter = new WindowsFormsApp1.DSButton();
+            this.btnSearch = new WindowsFormsApp1.DSButton();
+            this.btnRealme = new WindowsFormsApp1.DSButton();
+            this.btnXiaomi = new WindowsFormsApp1.DSButton();
+            this.btnOppo = new WindowsFormsApp1.DSButton();
+            this.btnApple = new WindowsFormsApp1.DSButton();
+            this.btnSamsung = new WindowsFormsApp1.DSButton();
             this.mall_Product6 = new WindowsFormsApp1.Mall_Product();
             this.mall_Product7 = new WindowsFormsApp1.Mall_Product();
             this.mall_Product4 = new WindowsFormsApp1.Mall_Product();
@@ -40,54 +49,55 @@ namespace WindowsFormsApp1
             this.mall_Product3 = new WindowsFormsApp1.Mall_Product();
             this.mall_Product2 = new WindowsFormsApp1.Mall_Product();
             this.mall_Product1 = new WindowsFormsApp1.Mall_Product();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.btnPricefilter = new WindowsFormsApp1.DSButton();
-            this.btnSearch = new WindowsFormsApp1.DSButton();
-            this.btnRealme = new WindowsFormsApp1.DSButton();
-            this.btnXiaomi = new WindowsFormsApp1.DSButton();
-            this.btnOppo = new WindowsFormsApp1.DSButton();
-            this.btnApple = new WindowsFormsApp1.DSButton();
-            this.btnSamsung = new WindowsFormsApp1.DSButton();
-            this.pnlProduct.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pnlProduct
-            // 
-            this.panel1.AutoScroll = true;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 153);
-            this.panel1.Margin = new System.Windows.Forms.Padding(0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1171, 443);
-            this.panel1.TabIndex = 31;
-            this.pnlProduct.AutoScroll = true;
-            this.pnlProduct.Controls.Add(this.mall_Product6);
-            this.pnlProduct.Controls.Add(this.mall_Product7);
-            this.pnlProduct.Controls.Add(this.mall_Product4);
-            this.pnlProduct.Controls.Add(this.mall_Product8);
-            this.pnlProduct.Controls.Add(this.mall_Product5);
-            this.pnlProduct.Controls.Add(this.mall_Product9);
-            this.pnlProduct.Controls.Add(this.mall_Product3);
-            this.pnlProduct.Controls.Add(this.mall_Product2);
-            this.pnlProduct.Controls.Add(this.mall_Product1);
-            this.pnlProduct.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlProduct.Location = new System.Drawing.Point(0, 153);
-            this.pnlProduct.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlProduct.Name = "pnlProduct";
-            this.pnlProduct.Size = new System.Drawing.Size(1171, 443);
-            this.pnlProduct.TabIndex = 31;
             // 
             // txtSearch
             // 
-            this.txtSearch.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtSearch.Location = new System.Drawing.Point(340, 23);
+            this.txtSearch.Location = new System.Drawing.Point(392, 23);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(377, 36);
+            this.txtSearch.Size = new System.Drawing.Size(351, 36);
             this.txtSearch.TabIndex = 27;
-            this.txtSearch.Text = "Tìm kiếm";
+            this.txtSearch.Text = "Tìm theo tên điện thoại ";
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             this.txtSearch.Enter += new System.EventHandler(this.txtSearch_Enter);
             this.txtSearch.Leave += new System.EventHandler(this.txtSearch_Leave);
+            // 
+            // pnlProduct
+            // 
+            this.pnlProduct.AutoScroll = true;
+            this.pnlProduct.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.pnlProduct.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlProduct.Location = new System.Drawing.Point(0, 152);
+            this.pnlProduct.Name = "pnlProduct";
+            this.pnlProduct.Size = new System.Drawing.Size(1171, 444);
+            this.pnlProduct.TabIndex = 42;
+            // 
+            // lblClearSearch
+            // 
+            this.lblClearSearch.BackColor = System.Drawing.Color.Tomato;
+            this.lblClearSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblClearSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblClearSearch.Location = new System.Drawing.Point(363, 27);
+            this.lblClearSearch.Name = "lblClearSearch";
+            this.lblClearSearch.Size = new System.Drawing.Size(23, 29);
+            this.lblClearSearch.TabIndex = 43;
+            this.lblClearSearch.Text = "X";
+            this.lblClearSearch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblClearSearch.Visible = false;
+            this.lblClearSearch.Click += new System.EventHandler(this.lblClearSearch_Click);
+            // 
+            // lsbSuggestions
+            // 
+            this.lsbSuggestions.FormattingEnabled = true;
+            this.lsbSuggestions.ItemHeight = 23;
+            this.lsbSuggestions.Location = new System.Drawing.Point(392, 66);
+            this.lsbSuggestions.Name = "lsbSuggestions";
+            this.lsbSuggestions.Size = new System.Drawing.Size(351, 4);
+            this.lsbSuggestions.TabIndex = 44;
+            this.lsbSuggestions.Visible = false;
+            this.lsbSuggestions.SelectedIndexChanged += new System.EventHandler(this.lsbSuggestions_SelectedIndexChanged);
             // 
             // btnPricefilter
             // 
@@ -127,6 +137,7 @@ namespace WindowsFormsApp1
             this.btnSearch.Text = "Tìm kiếm";
             this.btnSearch.TextColor = System.Drawing.Color.Black;
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnRealme
             // 
@@ -232,10 +243,112 @@ namespace WindowsFormsApp1
             this.btnSamsung.UseVisualStyleBackColor = false;
             this.btnSamsung.Click += new System.EventHandler(this.btnClickEvent);
             // 
+            // mall_Product6
+            // 
+            this.mall_Product6.AutoSize = true;
+            this.mall_Product6.BackColor = System.Drawing.Color.White;
+            this.mall_Product6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mall_Product6.Location = new System.Drawing.Point(0, 0);
+            this.mall_Product6.Margin = new System.Windows.Forms.Padding(4);
+            this.mall_Product6.Name = "mall_Product6";
+            this.mall_Product6.Size = new System.Drawing.Size(357, 357);
+            this.mall_Product6.TabIndex = 0;
+            // 
+            // mall_Product7
+            // 
+            this.mall_Product7.AutoSize = true;
+            this.mall_Product7.BackColor = System.Drawing.Color.White;
+            this.mall_Product7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mall_Product7.Location = new System.Drawing.Point(0, 0);
+            this.mall_Product7.Margin = new System.Windows.Forms.Padding(4);
+            this.mall_Product7.Name = "mall_Product7";
+            this.mall_Product7.Size = new System.Drawing.Size(357, 357);
+            this.mall_Product7.TabIndex = 1;
+            // 
+            // mall_Product4
+            // 
+            this.mall_Product4.AutoSize = true;
+            this.mall_Product4.BackColor = System.Drawing.Color.White;
+            this.mall_Product4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mall_Product4.Location = new System.Drawing.Point(0, 0);
+            this.mall_Product4.Margin = new System.Windows.Forms.Padding(4);
+            this.mall_Product4.Name = "mall_Product4";
+            this.mall_Product4.Size = new System.Drawing.Size(357, 357);
+            this.mall_Product4.TabIndex = 2;
+            // 
+            // mall_Product8
+            // 
+            this.mall_Product8.AutoSize = true;
+            this.mall_Product8.BackColor = System.Drawing.Color.White;
+            this.mall_Product8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mall_Product8.Location = new System.Drawing.Point(0, 0);
+            this.mall_Product8.Margin = new System.Windows.Forms.Padding(4);
+            this.mall_Product8.Name = "mall_Product8";
+            this.mall_Product8.Size = new System.Drawing.Size(357, 357);
+            this.mall_Product8.TabIndex = 3;
+            // 
+            // mall_Product5
+            // 
+            this.mall_Product5.AutoSize = true;
+            this.mall_Product5.BackColor = System.Drawing.Color.White;
+            this.mall_Product5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mall_Product5.Location = new System.Drawing.Point(0, 0);
+            this.mall_Product5.Margin = new System.Windows.Forms.Padding(4);
+            this.mall_Product5.Name = "mall_Product5";
+            this.mall_Product5.Size = new System.Drawing.Size(357, 357);
+            this.mall_Product5.TabIndex = 4;
+            // 
+            // mall_Product9
+            // 
+            this.mall_Product9.AutoSize = true;
+            this.mall_Product9.BackColor = System.Drawing.Color.White;
+            this.mall_Product9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mall_Product9.Location = new System.Drawing.Point(0, 0);
+            this.mall_Product9.Margin = new System.Windows.Forms.Padding(4);
+            this.mall_Product9.Name = "mall_Product9";
+            this.mall_Product9.Size = new System.Drawing.Size(357, 357);
+            this.mall_Product9.TabIndex = 5;
+            // 
+            // mall_Product3
+            // 
+            this.mall_Product3.AutoSize = true;
+            this.mall_Product3.BackColor = System.Drawing.Color.White;
+            this.mall_Product3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mall_Product3.Location = new System.Drawing.Point(0, 0);
+            this.mall_Product3.Margin = new System.Windows.Forms.Padding(4);
+            this.mall_Product3.Name = "mall_Product3";
+            this.mall_Product3.Size = new System.Drawing.Size(357, 357);
+            this.mall_Product3.TabIndex = 6;
+            // 
+            // mall_Product2
+            // 
+            this.mall_Product2.AutoSize = true;
+            this.mall_Product2.BackColor = System.Drawing.Color.White;
+            this.mall_Product2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mall_Product2.Location = new System.Drawing.Point(0, 0);
+            this.mall_Product2.Margin = new System.Windows.Forms.Padding(4);
+            this.mall_Product2.Name = "mall_Product2";
+            this.mall_Product2.Size = new System.Drawing.Size(357, 357);
+            this.mall_Product2.TabIndex = 7;
+            // 
+            // mall_Product1
+            // 
+            this.mall_Product1.AutoSize = true;
+            this.mall_Product1.BackColor = System.Drawing.Color.White;
+            this.mall_Product1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mall_Product1.Location = new System.Drawing.Point(0, 0);
+            this.mall_Product1.Margin = new System.Windows.Forms.Padding(4);
+            this.mall_Product1.Name = "mall_Product1";
+            this.mall_Product1.Size = new System.Drawing.Size(357, 357);
+            this.mall_Product1.TabIndex = 8;
+            // 
             // Mall
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lsbSuggestions);
+            this.Controls.Add(this.lblClearSearch);
+            this.Controls.Add(this.pnlProduct);
             this.Controls.Add(this.btnPricefilter);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnRealme);
@@ -249,8 +362,6 @@ namespace WindowsFormsApp1
             this.Name = "Mall";
             this.Size = new System.Drawing.Size(1171, 596);
             this.Load += new System.EventHandler(this.Mall_Load);
-            this.pnlProduct.ResumeLayout(false);
-            this.pnlProduct.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,8 +369,6 @@ namespace WindowsFormsApp1
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel pnlProduct;
         private Mall_Product mall_Product6;
         private Mall_Product mall_Product7;
         private Mall_Product mall_Product4;
@@ -277,5 +386,8 @@ namespace WindowsFormsApp1
         private DSButton btnOppo;
         private DSButton btnXiaomi;
         private DSButton btnRealme;
+        private System.Windows.Forms.Panel pnlProduct;
+        private System.Windows.Forms.Label lblClearSearch;
+        private System.Windows.Forms.ListBox lsbSuggestions;
     }
 }

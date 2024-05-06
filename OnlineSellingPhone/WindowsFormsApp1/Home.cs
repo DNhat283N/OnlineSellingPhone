@@ -24,10 +24,10 @@ namespace WindowsFormsApp1
 
         string[] imagePaths = new string[]
         {
-            @"D:\OnlineSellingPhone_DatabaseCoding_BigAssignment\OnlineSellingPhone\Image\0.PNG",
-            "D:\\OnlineSellingPhone_DatabaseCoding_BigAssignment\\OnlineSellingPhone\\Image\\1.PNG",
-            "D:\\OnlineSellingPhone_DatabaseCoding_BigAssignment\\OnlineSellingPhone\\Image\\2.PNG",
-            "D:\\OnlineSellingPhone_DatabaseCoding_BigAssignment\\OnlineSellingPhone\\Image\\3.PNG"
+            @"D:\DatabaseCoding\OnlineSellingPhone_DatabaseCoding_BigAssignment\OnlineSellingPhone\WindowsFormsApp1\Assert\Images\0.png",
+            @"D:\DatabaseCoding\OnlineSellingPhone_DatabaseCoding_BigAssignment\OnlineSellingPhone\WindowsFormsApp1\Assert\Images\1.png",
+            @"D:\DatabaseCoding\OnlineSellingPhone_DatabaseCoding_BigAssignment\OnlineSellingPhone\WindowsFormsApp1\Assert\Images\2.png",
+            @"D:\DatabaseCoding\OnlineSellingPhone_DatabaseCoding_BigAssignment\OnlineSellingPhone\WindowsFormsApp1\Assert\Images\3.png"
         };
         
         private void LoadImage()

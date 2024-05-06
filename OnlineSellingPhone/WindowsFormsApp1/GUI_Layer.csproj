@@ -196,6 +196,19 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Assert\Icons\home_32px.png" />
+    <Content Include="Assert\Icons\icons8-back-64 %281%29.png" />
+    <Content Include="Assert\Icons\icons8-bell-32.png" />
+    <Content Include="Assert\Icons\icons8-cart-32.png" />
+    <Content Include="Assert\Icons\icons8-facebook-32.png" />
+    <Content Include="Assert\Icons\icons8-instagram-32.png" />
+    <Content Include="Assert\Icons\icons8-next-32.png" />
+    <Content Include="Assert\Icons\icons8-off-32.png" />
+    <Content Include="Assert\Icons\icons8-previous-32.png" />
+    <Content Include="Assert\Icons\icons8-shopping-mall-32.png" />
+    <Content Include="Assert\Icons\icons8-twitter-32.png" />
+    <Content Include="Assert\Icons\icons8-user-32.png" />
+    <Content Include="Assert\Icons\pngtree-smartphone-shop-sale-logo-design-png-image_5069958.jpg" />
     <Content Include="Assert\Images\0.PNG" />
     <Content Include="Assert\Images\1.PNG" />
     <Content Include="Assert\Images\2.PNG" />
