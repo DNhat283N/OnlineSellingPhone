@@ -10,6 +10,14 @@ namespace BusinessLayer
 {
     public class DAO
     {
+
+        public enum PRICE_FILTER
+        {
+            ASCENDING,
+            DESCENDING,
+            NONE
+        }
+
         public static DataTable GetCustomerByNameKeyword(string kw)
         {
             DataTable customers = new DataTable();
@@ -153,34 +161,70 @@ namespace BusinessLayer
 
         //Query 
 
-        public static List<Phone> QueryPhoneInformationByManufacturerName(string name = "")
+        private static List<Phone> QueryPhoneInformationByManufacturerName(List<Phone> phones, string name = "")
         {
-            List<Phone> data = new List<Phone>();
+            List<Phone> resultPhonesList = new List<Phone>(phones);
             if(name != "")
             {
                 using (OnlineSellingPhoneContext db = new OnlineSellingPhoneContext())
                 {
                     if (db.Manufacturers.Any(m => m.Manufacturer_Name.ToLower() == name.ToLower()))
                     {
-                        var query = from p in db.Phones
+                        var query = from p in resultPhonesList
                                     join m in db.Manufacturers on p.Manufacturer_ID equals m.Manufacturer_ID
                                     where m.Manufacturer_Name.ToLower() == name.ToLower()
-                                    select (p);
-                        data = query.ToList();
+                                    select p;
+                        resultPhonesList = query.ToList();
                     }
                 }
+            }
+            return resultPhonesList;
+        }
+
+        private static List<Phone> SortPhoneList(List<Phone> phones, PRICE_FILTER sort = PRICE_FILTER.NONE)
+        {
+            List<Phone> sortedPhoneList = new List<Phone>(phones);
+            if(sort == PRICE_FILTER.ASCENDING)
+            {
+                sortedPhoneList.Sort((x, y) => x.Phone_Price.CompareTo(y.Phone_Price));
+                return sortedPhoneList;
+            } 
+            else if(sort == PRICE_FILTER.DESCENDING)
+            {
+                sortedPhoneList.Sort((x, y) => y.Phone_Price.CompareTo(x.Phone_Price));
+                return sortedPhoneList;
+            }
+            else
+                return phones;
+        }
+
+        private static List<Phone> SearchPhone(string keyword = "")
+        {
+            List<Phone> phoneList = new List<Phone>();
+            if(keyword == "")
+            {
+                phoneList = QueryAllPhoneTable();
             }
             else
             {
                 using (OnlineSellingPhoneContext db = new OnlineSellingPhoneContext())
                 {
                     var query = from p in db.Phones
-                                join m in db.Manufacturers on p.Manufacturer_ID equals m.Manufacturer_ID
-                                select p;
-                    data = query.ToList();
+                            where p.Phone_Name.ToLower().Contains(keyword.ToLower())
+                            select p;
+                    phoneList = query.ToList();
                 }
             }
-            return data;
+            return phoneList;
+        }
+
+        public static List<Phone> QueryPhoneTableBySearchKeywordOrByManuFacturerNameAndFilterByPrice(string keyword = "", string manufacturerName = "", PRICE_FILTER priceFilter = PRICE_FILTER.NONE)
+        {
+            List<Phone> resultListPhone = new List<Phone>();
+            resultListPhone = SearchPhone(keyword);
+            resultListPhone = QueryPhoneInformationByManufacturerName(resultListPhone, manufacturerName);
+            resultListPhone = SortPhoneList(resultListPhone, priceFilter);
+            return resultListPhone;
         }
 
         public static List<Phone> QueryAllPhoneTable()
