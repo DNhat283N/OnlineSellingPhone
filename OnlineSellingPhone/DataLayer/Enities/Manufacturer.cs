@@ -19,6 +19,8 @@ namespace DataLayer.Enities
         [MaxLength(50)]
         public string Manufacturer_Name { get; set; }
 
+        public Manufacturer() { }
+
         public Manufacturer(string manufacturer_Name)
         {
             Manufacturer_Name = manufacturer_Name;
