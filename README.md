@@ -15,7 +15,9 @@ My solution installed Entity Framework so it will be **Uninstall** instead of **
 In VisualStudio **Tools -> NuGet Package Manager -> Package Manger Console**   
 # **3. Build Migration Folder**
 In **Package Manager Console** write these commands sequence:enable-migrations, add-migration Migrations and update-database
+
 **Note: Build in DataLayer**
+
 ![image](https://github.com/DNhat283N/OnlineSellingPhone_DatabaseCoding_BigAssignment/assets/112379980/53bef44a-caf9-4163-a78b-d64cded9d146)
 
 # **4. Add data to Database**
