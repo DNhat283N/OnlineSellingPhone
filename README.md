@@ -1,6 +1,8 @@
 # OnlineSellingPhone_DatabaseCoding_BigAssignment
 Using .NetFramework version 4.6, and EntityFramework version 6.4.4 are required to run the project.
+
 How to run the project?
+
 **1. Install Entity Framework 6.4.4**
 
     In VisualStudio **Tools -> NuGet Package Manager -> Manage NuGet Packages for Solution...**
