@@ -55,6 +55,14 @@ namespace WindowsFormsApp1
                 txtColor.Text = "#";
                 txtColor.SelectionStart = txtColor.Text.Length;
             }    
+            if (txtColor.Text == "#")
+            {
+                lblNoColor.Visible = true;
+            }    
+            else
+            {
+                lblNoColor.Visible = false;
+            }    
         }
 
      
@@ -69,7 +77,64 @@ namespace WindowsFormsApp1
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Thêm sản phẩm thành công");
+            if (lblNoName.Visible == false && lblNoManufacturer.Visible == false && lblNoColor.Visible == false && lblNoPrice.Visible == false && lblNoQuantity.Visible == false)
+            {
+                MessageBox.Show("Thêm sản phẩm thành công");
+            }
+            else
+            {
+                MessageBox.Show("Thêm sản phẩm thất bại! Vui lòng kiểm tra lại thông tin đã nhập");
+            }    
+        }
+
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+            if (txtName.Text == "")
+            {
+                lblNoName.Visible = true;
+            }    
+            else
+            {
+                lblNoName.Visible = false;
+            }    
+        }
+
+     
+
+        private void txtManufacturer_TextChanged(object sender, EventArgs e)
+        {
+            if (txtManufacturer.Text == "")
+            {
+                lblNoManufacturer.Visible = true;
+            }
+            else
+            {
+                lblNoManufacturer.Visible = false;
+            }
+        }
+
+        private void txtPrice_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPrice.Text == "")
+            {
+                lblNoPrice.Visible = true;
+            }    
+            else
+            {
+                lblNoPrice.Visible = false;
+            }    
+        }
+
+        private void nudQuantity_ValueChanged(object sender, EventArgs e)
+        {
+            if (nudQuantity.Value == 0)
+            {
+                lblNoQuantity.Visible = true;
+            }    
+            else
+            {
+                lblNoQuantity.Visible = false;
+            }    
         }
     }
 }

@@ -32,7 +32,7 @@ namespace WindowsFormsApp1
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Product_add_admin));
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblForm = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -47,6 +47,11 @@ namespace WindowsFormsApp1
             this.btnCancel = new WindowsFormsApp1.DSButton();
             this.btnAdd = new WindowsFormsApp1.DSButton();
             this.btnBrowse = new WindowsFormsApp1.DSButton();
+            this.lblNoName = new System.Windows.Forms.Label();
+            this.lblNoManufacturer = new System.Windows.Forms.Label();
+            this.lblNoColor = new System.Windows.Forms.Label();
+            this.lblNoPrice = new System.Windows.Forms.Label();
+            this.lblNoQuantity = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbProductImage)).BeginInit();
@@ -72,13 +77,13 @@ namespace WindowsFormsApp1
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // label2
+            // lblForm
             // 
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(0, 144);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1171, 357);
-            this.label2.TabIndex = 2;
+            this.lblForm.BackColor = System.Drawing.Color.White;
+            this.lblForm.Location = new System.Drawing.Point(0, 144);
+            this.lblForm.Name = "lblForm";
+            this.lblForm.Size = new System.Drawing.Size(1171, 357);
+            this.lblForm.TabIndex = 2;
             // 
             // label3
             // 
@@ -97,6 +102,7 @@ namespace WindowsFormsApp1
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(366, 32);
             this.txtName.TabIndex = 4;
+            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // label4
             // 
@@ -114,6 +120,7 @@ namespace WindowsFormsApp1
             this.txtManufacturer.Name = "txtManufacturer";
             this.txtManufacturer.Size = new System.Drawing.Size(366, 32);
             this.txtManufacturer.TabIndex = 6;
+            this.txtManufacturer.TextChanged += new System.EventHandler(this.txtManufacturer_TextChanged);
             // 
             // label5
             // 
@@ -128,7 +135,7 @@ namespace WindowsFormsApp1
             // txtColor
             // 
             this.txtColor.Location = new System.Drawing.Point(203, 304);
-            this.txtColor.MaxLength = 6;
+            this.txtColor.MaxLength = 7;
             this.txtColor.Name = "txtColor";
             this.txtColor.Size = new System.Drawing.Size(366, 32);
             this.txtColor.TabIndex = 8;
@@ -150,6 +157,7 @@ namespace WindowsFormsApp1
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(366, 32);
             this.txtPrice.TabIndex = 10;
+            this.txtPrice.TextChanged += new System.EventHandler(this.txtPrice_TextChanged);
             this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
             // 
             // label7
@@ -168,6 +176,7 @@ namespace WindowsFormsApp1
             this.nudQuantity.Name = "nudQuantity";
             this.nudQuantity.Size = new System.Drawing.Size(120, 32);
             this.nudQuantity.TabIndex = 12;
+            this.nudQuantity.ValueChanged += new System.EventHandler(this.nudQuantity_ValueChanged);
             // 
             // pcbProductImage
             // 
@@ -237,10 +246,80 @@ namespace WindowsFormsApp1
             this.btnBrowse.UseVisualStyleBackColor = false;
             this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
+            // lblNoName
+            // 
+            this.lblNoName.AutoSize = true;
+            this.lblNoName.BackColor = System.Drawing.Color.White;
+            this.lblNoName.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoName.ForeColor = System.Drawing.Color.Red;
+            this.lblNoName.Location = new System.Drawing.Point(226, 213);
+            this.lblNoName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNoName.Name = "lblNoName";
+            this.lblNoName.Size = new System.Drawing.Size(211, 17);
+            this.lblNoName.TabIndex = 41;
+            this.lblNoName.Text = "* Vui lòng nhập tên sản phẩm";
+            // 
+            // lblNoManufacturer
+            // 
+            this.lblNoManufacturer.AutoSize = true;
+            this.lblNoManufacturer.BackColor = System.Drawing.Color.White;
+            this.lblNoManufacturer.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoManufacturer.ForeColor = System.Drawing.Color.Red;
+            this.lblNoManufacturer.Location = new System.Drawing.Point(226, 277);
+            this.lblNoManufacturer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNoManufacturer.Name = "lblNoManufacturer";
+            this.lblNoManufacturer.Size = new System.Drawing.Size(203, 17);
+            this.lblNoManufacturer.TabIndex = 42;
+            this.lblNoManufacturer.Text = "* Vui lòng nhập nhà sản xuất";
+            // 
+            // lblNoColor
+            // 
+            this.lblNoColor.AutoSize = true;
+            this.lblNoColor.BackColor = System.Drawing.Color.White;
+            this.lblNoColor.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoColor.ForeColor = System.Drawing.Color.Red;
+            this.lblNoColor.Location = new System.Drawing.Point(226, 339);
+            this.lblNoColor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNoColor.Name = "lblNoColor";
+            this.lblNoColor.Size = new System.Drawing.Size(177, 17);
+            this.lblNoColor.TabIndex = 43;
+            this.lblNoColor.Text = "* Vui lòng nhập mã màu";
+            // 
+            // lblNoPrice
+            // 
+            this.lblNoPrice.AutoSize = true;
+            this.lblNoPrice.BackColor = System.Drawing.Color.White;
+            this.lblNoPrice.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoPrice.ForeColor = System.Drawing.Color.Red;
+            this.lblNoPrice.Location = new System.Drawing.Point(226, 403);
+            this.lblNoPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNoPrice.Name = "lblNoPrice";
+            this.lblNoPrice.Size = new System.Drawing.Size(139, 17);
+            this.lblNoPrice.TabIndex = 44;
+            this.lblNoPrice.Text = "* Vui lòng nhập giá";
+            // 
+            // lblNoQuantity
+            // 
+            this.lblNoQuantity.AutoSize = true;
+            this.lblNoQuantity.BackColor = System.Drawing.Color.White;
+            this.lblNoQuantity.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoQuantity.ForeColor = System.Drawing.Color.Red;
+            this.lblNoQuantity.Location = new System.Drawing.Point(226, 460);
+            this.lblNoQuantity.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNoQuantity.Name = "lblNoQuantity";
+            this.lblNoQuantity.Size = new System.Drawing.Size(245, 17);
+            this.lblNoQuantity.TabIndex = 45;
+            this.lblNoQuantity.Text = "* Vui lòng chỉnh số lượng sản phẩm";
+            // 
             // Product_add_admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lblNoQuantity);
+            this.Controls.Add(this.lblNoPrice);
+            this.Controls.Add(this.lblNoColor);
+            this.Controls.Add(this.lblNoManufacturer);
+            this.Controls.Add(this.lblNoName);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnBrowse);
@@ -257,7 +336,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblForm);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Product_add_admin";
@@ -274,7 +353,7 @@ namespace WindowsFormsApp1
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblForm;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label4;
@@ -289,5 +368,10 @@ namespace WindowsFormsApp1
         private DSButton btnBrowse;
         private DSButton btnAdd;
         private DSButton btnCancel;
+        private System.Windows.Forms.Label lblNoName;
+        private System.Windows.Forms.Label lblNoManufacturer;
+        private System.Windows.Forms.Label lblNoColor;
+        private System.Windows.Forms.Label lblNoPrice;
+        private System.Windows.Forms.Label lblNoQuantity;
     }
 }

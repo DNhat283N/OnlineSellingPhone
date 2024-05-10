@@ -64,14 +64,16 @@ namespace WindowsFormsApp1
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (txtUsername.Text == " Username")
+            if (lblNoUsername.Visible == false && lblNoPassword.Visible == false)
             {
-                lblNoUsername.Visible = true;
+                MessageBox.Show("Đăng nhập thành công");
             }
-            if (txtPassword.Text == " Password")
+            else
             {
-                lblNoPassword.Visible = true;
-            }    
+                MessageBox.Show("Đăng nhập thất bại! Vui lòng kiểm tra lại thông tin đăng nhập");
+            } 
+            
+                
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -102,6 +104,30 @@ namespace WindowsFormsApp1
             }
             Form1.Instance.PnlContainer.Controls["Account_ForgetPw"].BringToFront();
             Form1.Instance.BackButton.Visible = true;
+        }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+            if (txtUsername.Text == "" || txtUsername.Text == " Username")
+            {
+                lblNoUsername.Visible = true;
+            }
+            else
+            {
+                lblNoUsername.Visible = false;
+            }
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPassword.Text == "" || txtPassword.Text == " Password")
+            {
+                lblNoPassword.Visible = true;
+            }
+            else
+            {
+                lblNoPassword.Visible = false;
+            }
         }
     }
 }
