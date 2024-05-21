@@ -239,6 +239,35 @@ namespace BusinessLayer
             return data;
         }
 
+        public static List<Phone> QueryPhoneWithConfiguration()
+        {
+            List<Phone> list = new List<Phone>();
+            using (OnlineSellingPhoneContext db = new OnlineSellingPhoneContext())
+            {
+                var query = from p in db.Phones
+                            join pc in db.PhoneConfigurations on p.Phone_ID equals pc.Phone_ID
+                            join c in db.Configurations on pc.Configuration_ID equals c.Configuration_ID
+                            join m in db.Manufacturers on p.Manufacturer_ID equals m.Manufacturer_ID
+                            select p;
+                list = query.ToList();
+            }
+                return list;
+        }
+
+        public static List<Image> QueryImagesOfPhoneByPhoneID(int phoneID)
+        {
+            List<Image> list = new List<Image>();
+            using (OnlineSellingPhoneContext db = new OnlineSellingPhoneContext())
+            {
+                var query = from i in db.Images
+                            join p in db.Phones on i.Phone_ID equals p.Phone_ID
+                            where i.Phone_ID.Equals(phoneID)
+                            select i;
+                list = query.ToList();
+            }
+            return list;
+        }
+
         //Admin
 
         private static bool AddImage(string[] imageURLs, int phoneID)
@@ -295,6 +324,64 @@ namespace BusinessLayer
                 isAdded = false;
             }
             return isAdded;
+        }
+
+        //Admin form
+        
+        private static bool IsExsitPhoneConfig(int RAM, int ROM)
+        {
+            using (OnlineSellingPhoneContext db = new OnlineSellingPhoneContext())
+            {
+                var query = from c in db.Configurations
+                            where c.Configuration_RAM.Equals(RAM) && c.Configuration_ROM.Equals(ROM)
+                            select c;
+                return query.Any();
+            }
+        }
+
+        private static int SelectConfigurationIDFromRAMAndROM(int RAM, int ROM)
+        {
+            if (IsExsitPhoneConfig(RAM, ROM))
+            {
+                using (OnlineSellingPhoneContext db = new OnlineSellingPhoneContext())
+                {
+                    var query = from c in db.Configurations
+                                where c.Configuration_RAM.Equals(RAM) && c.Configuration_ROM.Equals(ROM)
+                                select c.Configuration_ID;
+
+                    int configID = query.FirstOrDefault();
+                    return configID;
+                }
+            }
+            else
+                return -1;
+        }
+
+        public static void AddPhone(string phoneName, int manufacturerID, string phoneColor, double phonePrice, int phoneQuantityInStock, string imageURL1, int RAM, int ROM, string imageURL2 =  null)
+        {
+            using (OnlineSellingPhoneContext db = new OnlineSellingPhoneContext())
+            {
+                Phone p = new Phone(phoneName, phoneColor, phonePrice, phoneQuantityInStock, manufacturerID);
+                db.Phones.Add(p);
+
+                if(IsExsitPhoneConfig(RAM, ROM)){
+                    int configID = SelectConfigurationIDFromRAMAndROM(RAM, ROM);
+                    if (configID > 0)
+                    {
+                        db.PhoneConfigurations.Add(new PhoneConfiguration(p.Phone_ID, configID));
+                    }
+                    else
+                        return;
+                }
+                else
+                {
+                    Configuration config = new Configuration(RAM, ROM);
+                    db.Configurations.Add(config);
+                    db.PhoneConfigurations.Add(new PhoneConfiguration(p.Phone_ID, config.Configuration_ID));
+                }
+
+                db.SaveChanges();
+            }
         }
     }
 }
