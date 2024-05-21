@@ -102,6 +102,12 @@
     <Compile Include="Mall.Designer.cs">
       <DependentUpon>Mall.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mall_ProductDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mall_ProductDetail.Designer.cs">
+      <DependentUpon>Mall_ProductDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mall_Product.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -154,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mall_Product.resx">
       <DependentUpon>Mall_Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mall_ProductDetail.resx">
+      <DependentUpon>Mall_ProductDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Product_add_admin.resx">
       <DependentUpon>Product_add_admin.cs</DependentUpon>

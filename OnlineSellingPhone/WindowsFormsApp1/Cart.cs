@@ -22,17 +22,17 @@ namespace WindowsFormsApp1
         //    Mall_Product product = new Mall_Product();
         //    fpnlProductCart.Controls.Add(product);
         //}
-       
+
 
         private void Cart_SizeChanged(object sender, EventArgs e)
         {
         }
         //int width = 1150;
         //int height = 164;
-        
+
         private void flowLayoutPanel1_SizeChanged(object sender, EventArgs e)
         {
-            
+
             //int newWidth = flowLayoutPanel1.Width;
             //int newHeight = flowLayoutPanel1.Height;
             //mall_Product1.Location = new Point(mall_Product1.Location.X + newWidth - width, mall_Product1.Location.Y + newHeight - height);
@@ -64,7 +64,7 @@ namespace WindowsFormsApp1
                 lblNoPayment.Visible = true;
             }
         }
-        
+
         private void btnPaypal_Click(object sender, EventArgs e)
         {
             if (buttonClicked == false)
@@ -83,10 +83,11 @@ namespace WindowsFormsApp1
             }
         }
 
+            
 
 
 
-        private void cbbCity_SelectedIndexChanged(object sender, EventArgs e)
+    private void cbbCity_SelectedIndexChanged(object sender, EventArgs e)
         {
             string city = cbbCity.SelectedItem.ToString();
             lblNoCity.Visible = false;
