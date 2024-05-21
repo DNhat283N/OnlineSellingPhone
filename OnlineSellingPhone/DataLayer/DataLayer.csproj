@@ -58,18 +58,20 @@
     <Compile Include="Enities\Account.cs" />
     <Compile Include="Enities\Address.cs" />
     <Compile Include="Enities\AddressOfCustomer.cs" />
+    <Compile Include="Enities\Configuration.cs" />
     <Compile Include="Enities\Customer.cs" />
     <Compile Include="Enities\Image.cs" />
     <Compile Include="Enities\Manufacturer.cs" />
     <Compile Include="Enities\Order.cs" />
     <Compile Include="Enities\OrderDetail.cs" />
     <Compile Include="Enities\Phone.cs" />
+    <Compile Include="Enities\PhoneConfiguration.cs" />
     <Compile Include="Enities\PhoneNumber.cs" />
     <Compile Include="Enities\Staff.cs" />
     <Compile Include="Enities\UserRoleEnum.cs" />
-    <Compile Include="Migrations\202404170829534_Migrations.cs" />
-    <Compile Include="Migrations\202404170829534_Migrations.designer.cs">
-      <DependentUpon>202404170829534_Migrations.cs</DependentUpon>
+    <Compile Include="Migrations\202405211003576_Migrations.cs" />
+    <Compile Include="Migrations\202405211003576_Migrations.designer.cs">
+      <DependentUpon>202405211003576_Migrations.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -79,8 +81,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202404170829534_Migrations.resx">
-      <DependentUpon>202404170829534_Migrations.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202405211003576_Migrations.resx">
+      <DependentUpon>202405211003576_Migrations.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
