@@ -19,7 +19,7 @@ namespace DataLayer.Enities
         [Required]
         public string Phone_Name { get; set; }
         [Column]
-        [MaxLength(7)]
+        [MaxLength(7), MinLength(7)]
         [Required]
         public string  Phone_Color { get; set; }
         [Column]
@@ -34,6 +34,8 @@ namespace DataLayer.Enities
         [ForeignKey("Manufacturer_ID")]
         public virtual Manufacturer Manufacturer { get; set; }
 
+
+        public Phone() { }
         public Phone(string phone_Name, string phone_Color, double phone_Price, int phone_ReadyInStock, int manufacturer_ID)
         {
             Phone_Name = phone_Name;

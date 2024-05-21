@@ -102,6 +102,12 @@
     <Compile Include="Mall.Designer.cs">
       <DependentUpon>Mall.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mall_ProductDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mall_ProductDetail.Designer.cs">
+      <DependentUpon>Mall_ProductDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mall_Product.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -155,6 +161,9 @@
     <EmbeddedResource Include="Mall_Product.resx">
       <DependentUpon>Mall_Product.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Mall_ProductDetail.resx">
+      <DependentUpon>Mall_ProductDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Product_add_admin.resx">
       <DependentUpon>Product_add_admin.cs</DependentUpon>
     </EmbeddedResource>
@@ -196,6 +205,19 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Assert\Icons\home_32px.png" />
+    <Content Include="Assert\Icons\icons8-back-64 %281%29.png" />
+    <Content Include="Assert\Icons\icons8-bell-32.png" />
+    <Content Include="Assert\Icons\icons8-cart-32.png" />
+    <Content Include="Assert\Icons\icons8-facebook-32.png" />
+    <Content Include="Assert\Icons\icons8-instagram-32.png" />
+    <Content Include="Assert\Icons\icons8-next-32.png" />
+    <Content Include="Assert\Icons\icons8-off-32.png" />
+    <Content Include="Assert\Icons\icons8-previous-32.png" />
+    <Content Include="Assert\Icons\icons8-shopping-mall-32.png" />
+    <Content Include="Assert\Icons\icons8-twitter-32.png" />
+    <Content Include="Assert\Icons\icons8-user-32.png" />
+    <Content Include="Assert\Icons\pngtree-smartphone-shop-sale-logo-design-png-image_5069958.jpg" />
     <Content Include="Assert\Images\0.PNG" />
     <Content Include="Assert\Images\1.PNG" />
     <Content Include="Assert\Images\2.PNG" />

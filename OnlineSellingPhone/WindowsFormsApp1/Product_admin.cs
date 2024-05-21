@@ -16,6 +16,8 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+
         private void txtSearch_Enter(object sender, EventArgs e)
         {
             if (txtSearch.Text == " Tìm kiếm")

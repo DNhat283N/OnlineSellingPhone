@@ -31,15 +31,6 @@ namespace WindowsFormsApp1
         {
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.pnlProduct = new System.Windows.Forms.Panel();
-            this.mall_Product6 = new WindowsFormsApp1.Mall_Product();
-            this.mall_Product7 = new WindowsFormsApp1.Mall_Product();
-            this.mall_Product4 = new WindowsFormsApp1.Mall_Product();
-            this.mall_Product8 = new WindowsFormsApp1.Mall_Product();
-            this.mall_Product5 = new WindowsFormsApp1.Mall_Product();
-            this.mall_Product9 = new WindowsFormsApp1.Mall_Product();
-            this.mall_Product3 = new WindowsFormsApp1.Mall_Product();
-            this.mall_Product2 = new WindowsFormsApp1.Mall_Product();
-            this.mall_Product1 = new WindowsFormsApp1.Mall_Product();
             this.btnEdit = new WindowsFormsApp1.DSButton();
             this.btnDelete = new WindowsFormsApp1.DSButton();
             this.btnAdd = new WindowsFormsApp1.DSButton();
@@ -50,7 +41,6 @@ namespace WindowsFormsApp1
             this.btnSamsung = new WindowsFormsApp1.DSButton();
             this.btnPricefilter = new WindowsFormsApp1.DSButton();
             this.btnXiaomi = new WindowsFormsApp1.DSButton();
-            this.pnlProduct.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtSearch
@@ -68,120 +58,12 @@ namespace WindowsFormsApp1
             // pnlProduct
             // 
             this.pnlProduct.AutoScroll = true;
-            this.pnlProduct.Controls.Add(this.mall_Product6);
-            this.pnlProduct.Controls.Add(this.mall_Product7);
-            this.pnlProduct.Controls.Add(this.mall_Product4);
-            this.pnlProduct.Controls.Add(this.mall_Product8);
-            this.pnlProduct.Controls.Add(this.mall_Product5);
-            this.pnlProduct.Controls.Add(this.mall_Product9);
-            this.pnlProduct.Controls.Add(this.mall_Product3);
-            this.pnlProduct.Controls.Add(this.mall_Product2);
-            this.pnlProduct.Controls.Add(this.mall_Product1);
             this.pnlProduct.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlProduct.Location = new System.Drawing.Point(0, 153);
             this.pnlProduct.Margin = new System.Windows.Forms.Padding(0);
             this.pnlProduct.Name = "pnlProduct";
             this.pnlProduct.Size = new System.Drawing.Size(1171, 443);
             this.pnlProduct.TabIndex = 43;
-            // 
-            // mall_Product6
-            // 
-            this.mall_Product6.AutoSize = true;
-            this.mall_Product6.BackColor = System.Drawing.Color.White;
-            this.mall_Product6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mall_Product6.Location = new System.Drawing.Point(28, 419);
-            this.mall_Product6.Margin = new System.Windows.Forms.Padding(4);
-            this.mall_Product6.Name = "mall_Product6";
-            this.mall_Product6.Size = new System.Drawing.Size(352, 346);
-            this.mall_Product6.TabIndex = 6;
-            // 
-            // mall_Product7
-            // 
-            this.mall_Product7.AutoSize = true;
-            this.mall_Product7.BackColor = System.Drawing.Color.White;
-            this.mall_Product7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mall_Product7.Location = new System.Drawing.Point(779, 819);
-            this.mall_Product7.Margin = new System.Windows.Forms.Padding(4);
-            this.mall_Product7.Name = "mall_Product7";
-            this.mall_Product7.Size = new System.Drawing.Size(352, 346);
-            this.mall_Product7.TabIndex = 5;
-            // 
-            // mall_Product4
-            // 
-            this.mall_Product4.AutoSize = true;
-            this.mall_Product4.BackColor = System.Drawing.Color.White;
-            this.mall_Product4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mall_Product4.Location = new System.Drawing.Point(779, 419);
-            this.mall_Product4.Margin = new System.Windows.Forms.Padding(4);
-            this.mall_Product4.Name = "mall_Product4";
-            this.mall_Product4.Size = new System.Drawing.Size(352, 346);
-            this.mall_Product4.TabIndex = 5;
-            // 
-            // mall_Product8
-            // 
-            this.mall_Product8.AutoSize = true;
-            this.mall_Product8.BackColor = System.Drawing.Color.White;
-            this.mall_Product8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mall_Product8.Location = new System.Drawing.Point(406, 819);
-            this.mall_Product8.Margin = new System.Windows.Forms.Padding(4);
-            this.mall_Product8.Name = "mall_Product8";
-            this.mall_Product8.Size = new System.Drawing.Size(352, 346);
-            this.mall_Product8.TabIndex = 4;
-            // 
-            // mall_Product5
-            // 
-            this.mall_Product5.AutoSize = true;
-            this.mall_Product5.BackColor = System.Drawing.Color.White;
-            this.mall_Product5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mall_Product5.Location = new System.Drawing.Point(406, 419);
-            this.mall_Product5.Margin = new System.Windows.Forms.Padding(4);
-            this.mall_Product5.Name = "mall_Product5";
-            this.mall_Product5.Size = new System.Drawing.Size(352, 346);
-            this.mall_Product5.TabIndex = 4;
-            // 
-            // mall_Product9
-            // 
-            this.mall_Product9.AutoSize = true;
-            this.mall_Product9.BackColor = System.Drawing.Color.White;
-            this.mall_Product9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mall_Product9.Location = new System.Drawing.Point(28, 819);
-            this.mall_Product9.Margin = new System.Windows.Forms.Padding(4);
-            this.mall_Product9.Name = "mall_Product9";
-            this.mall_Product9.Size = new System.Drawing.Size(352, 346);
-            this.mall_Product9.TabIndex = 3;
-            // 
-            // mall_Product3
-            // 
-            this.mall_Product3.AutoSize = true;
-            this.mall_Product3.BackColor = System.Drawing.Color.White;
-            this.mall_Product3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mall_Product3.Location = new System.Drawing.Point(779, 27);
-            this.mall_Product3.Margin = new System.Windows.Forms.Padding(4);
-            this.mall_Product3.Name = "mall_Product3";
-            this.mall_Product3.Size = new System.Drawing.Size(352, 346);
-            this.mall_Product3.TabIndex = 2;
-            // 
-            // mall_Product2
-            // 
-            this.mall_Product2.AutoSize = true;
-            this.mall_Product2.BackColor = System.Drawing.Color.White;
-            this.mall_Product2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mall_Product2.Location = new System.Drawing.Point(406, 27);
-            this.mall_Product2.Margin = new System.Windows.Forms.Padding(4);
-            this.mall_Product2.Name = "mall_Product2";
-            this.mall_Product2.Size = new System.Drawing.Size(352, 346);
-            this.mall_Product2.TabIndex = 1;
-            // 
-            // mall_Product1
-            // 
-            this.mall_Product1.AutoSize = true;
-            this.mall_Product1.BackColor = System.Drawing.Color.White;
-            this.mall_Product1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mall_Product1.Location = new System.Drawing.Point(28, 27);
-            this.mall_Product1.Margin = new System.Windows.Forms.Padding(4);
-            this.mall_Product1.Name = "mall_Product1";
-            this.mall_Product1.Size = new System.Drawing.Size(343, 346);
-            this.mall_Product1.TabIndex = 0;
             // 
             // btnEdit
             // 
@@ -404,8 +286,6 @@ namespace WindowsFormsApp1
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Product_admin";
             this.Size = new System.Drawing.Size(1171, 596);
-            this.pnlProduct.ResumeLayout(false);
-            this.pnlProduct.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -414,20 +294,11 @@ namespace WindowsFormsApp1
         #endregion
 
         private DSButton btnRealme;
-        private Mall_Product mall_Product6;
-        private Mall_Product mall_Product7;
-        private Mall_Product mall_Product4;
-        private Mall_Product mall_Product8;
-        private Mall_Product mall_Product5;
-        private Mall_Product mall_Product9;
-        private Mall_Product mall_Product3;
         private DSButton btnSearch;
         private DSButton btnOppo;
         private DSButton btnIphone;
         private DSButton btnSamsung;
-        private Mall_Product mall_Product2;
         private System.Windows.Forms.TextBox txtSearch;
-        private Mall_Product mall_Product1;
         private DSButton btnPricefilter;
         private DSButton btnXiaomi;
         private System.Windows.Forms.Panel pnlProduct;

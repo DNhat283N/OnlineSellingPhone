@@ -332,7 +332,7 @@ namespace WindowsFormsApp1
             this.pnlGender.Location = new System.Drawing.Point(493, 322);
             this.pnlGender.Margin = new System.Windows.Forms.Padding(0);
             this.pnlGender.Name = "pnlGender";
-            this.pnlGender.Size = new System.Drawing.Size(204, 38);
+            this.pnlGender.Size = new System.Drawing.Size(205, 35);
             this.pnlGender.TabIndex = 35;
             // 
             // Account_SignUp

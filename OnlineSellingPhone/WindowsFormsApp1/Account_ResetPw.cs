@@ -22,21 +22,28 @@ namespace WindowsFormsApp1
 
         private void btnResetPw_Click(object sender, EventArgs e)
         {
-            DAO.ResetAccountPassword(Account_ForgetPw.usernameVerify, txtNewPw.Text);
-            if (DAO.ResetAccountPassword(Account_ForgetPw.usernameVerify, txtNewPw.Text) == true)
+            if(txtNewPw.Text == txtNewPwRewrite.Text)
             {
-                MessageBox.Show("Đặt lại mật khẩu thành công");
-                 if (!Form1.Instance.PnlContainer.Controls.ContainsKey("Account_Login"))
-                 {
-                    Account_Login ALogin = new Account_Login();
-                    ALogin.Dock = DockStyle.Fill;
-                    Form1.Instance.PnlContainer.Controls.Add(ALogin);
-                 }
-                Form1.Instance.PnlContainer.Controls["Account_Login"].BringToFront();
-            }    
+                DAO.ResetAccountPassword(Account_ForgetPw.usernameVerify, txtNewPw.Text);
+                if (DAO.ResetAccountPassword(Account_ForgetPw.usernameVerify, txtNewPw.Text))
+                {
+                    MessageBox.Show("Đặt lại mật khẩu thành công");
+                    if (!Form1.Instance.PnlContainer.Controls.ContainsKey("Account_Login"))
+                    {
+                        Account_Login ALogin = new Account_Login();
+                        ALogin.Dock = DockStyle.Fill;
+                        Form1.Instance.PnlContainer.Controls.Add(ALogin);
+                    }
+                    Form1.Instance.PnlContainer.Controls["Account_Login"].BringToFront();
+                }
+                else
+                {
+                    MessageBox.Show("Đặt lại mật khẩu thất bại");
+                }
+            }
             else
             {
-                MessageBox.Show("Đặt lại mật khẩu thất bại");
+                MessageBox.Show("Mật khẩu không trùng khớp!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

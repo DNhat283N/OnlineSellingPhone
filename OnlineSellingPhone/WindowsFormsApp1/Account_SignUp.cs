@@ -21,7 +21,7 @@ namespace WindowsFormsApp1
             if (lblNoName.Visible == false && lblNoEmail.Visible == false && lblNoPhonenumber.Visible == false && lblNoDateOfBirth.Visible == false && lblNoGender.Visible == false && lblNoUsername.Visible == false && lblNoPassword.Visible == false)
             {
                 
-                DAO.AddSignUpCustomerInformation(txtFirstName.Text, Gender, dtpBirthdate.Value, txtUsername.Text.ToLower(), txtPassword.Text, txtEmail.Text, txtPhoneNumber.Text);
+                DAO.AddSignUpCustomerInformation(txtFirstName.Text, gender, dtpBirthdate.Value, txtUsername.Text.ToLower(), txtPassword.Text, txtEmail.Text, txtPhoneNumber.Text);
                 MessageBox.Show("Đăng kí tài khoản thành công");
                 Form1.Instance.PnlContainer.Controls.Clear();
                 if (!Form1.Instance.PnlContainer.Controls.ContainsKey("Account_Login"))
@@ -34,7 +34,7 @@ namespace WindowsFormsApp1
             }
             else
             {
-                MessageBox.Show("Đăng kí tài khoản thất bại, vui lòng kiểm tra lại thông tin đã nhập!");
+                MessageBox.Show("Đăng kí tài khoản thất bại, vui lòng kiểm tra lại thông tin đã nhập!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             } 
                 
 
@@ -72,7 +72,7 @@ namespace WindowsFormsApp1
             string checkEmail = txtEmail.Text;
             if (!IsValidEmail(checkEmail))
             {
-                lblNoEmail.Text = "*Email không hợp lệ";
+                lblNoEmail.Text = "Email không hợp lệ";
                 lblNoEmail.Visible = true;
             }
             else
@@ -81,7 +81,7 @@ namespace WindowsFormsApp1
             }   
             if (txtEmail.Text == "")
             {
-                lblNoEmail.Text = "*Vui lòng nhập Email";
+                lblNoEmail.Text = "Vui lòng nhập Email";
             }    
 
         }
@@ -90,7 +90,7 @@ namespace WindowsFormsApp1
             bool checkIsExistEmail = DAO.IsExistEmail(txtEmail.Text);
             if (checkIsExistEmail == true)
             {
-                lblNoEmail.Text = "*Email đã được sử dụng cho 1 tài khoản khác";
+                lblNoEmail.Text = "Email đã được sử dụng cho 1 tài khoản khác";
                 lblNoEmail.Visible = true;
             }
         }
@@ -140,7 +140,7 @@ namespace WindowsFormsApp1
 
         //Gender
         
-        bool Gender;
+        bool gender;
         private void rdbtnMale_CheckedChanged(object sender, EventArgs e)
         {   
             lblNoGender.Visible = false;
@@ -149,10 +149,10 @@ namespace WindowsFormsApp1
             {
                 if (selectedRadioButton.Text == "Nam")
                 {
-                    Gender = true;
+                    gender = true;
                 }
                 else
-                    Gender = false;
+                    gender = false;
             }
             else
             {
