@@ -67,7 +67,7 @@ namespace WindowsFormsApp1
             // pnlProduct
             // 
             this.pnlProduct.AutoScroll = true;
-            this.pnlProduct.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.pnlProduct.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.pnlProduct.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlProduct.Location = new System.Drawing.Point(0, 152);
             this.pnlProduct.Name = "pnlProduct";

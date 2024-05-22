@@ -15,7 +15,12 @@ namespace WindowsFormsApp1
         public Mall()
         {
             InitializeComponent();
+            //refreshMall = new refresh(LoadUI);
         }
+        //public delegate void refresh();
+        //public refresh refreshMall;
+
+
         private static int ITEM_WIDTH = 357;
         private static int ITEM_HEIGHT = 357;
         private static int MAX_COLUMNS_IN_PHONES_GRID = 3;
@@ -100,6 +105,7 @@ namespace WindowsFormsApp1
                         // Thêm sản phẩm vào panel1
                             pnlProduct.Controls.Add(product);
 
+                       
                         // Di chuyển sang hàng và cột tiếp theo
                         column++;
                         if (column >= maxColumns)
@@ -228,6 +234,7 @@ namespace WindowsFormsApp1
                     }
                 }
                 MANUFACTURER_NAME = clickedButton.Text;
+                clickedButton.BackColor = Color.DarkGray;
                 LoadUI();
             }
             else
@@ -241,6 +248,7 @@ namespace WindowsFormsApp1
                     }
                 }
                 MANUFACTURER_NAME = "";
+                clickedButton.BackColor = Color.White;
                 LoadUI();
             }
         }
