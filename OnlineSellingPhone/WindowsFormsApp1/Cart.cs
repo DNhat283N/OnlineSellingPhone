@@ -75,76 +75,77 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void SetPhoneGrid(List<Phone> phones, int itemWidth, int itemHeight, int horizontalSpacing, int verticalSpacing, int maxColumns, int offsetRowForFirstItem = 20, int offsetColumnForFirstItem = 20)
+        private void getPhoneToCart(List<Phone> phones, int itemWidth, int itemHeight, int horizontalSpacing, int verticalSpacing, int maxColumns, int offsetRowForFirstItem = 20, int offsetColumnForFirstItem = 20)
         {
-            //if (phones.Count() != 0)
+            //Phone selectedPhone = phones.FirstOrDefault();
+            //if (selectedPhone != null)
             //{
-            //    try
-            //    {
-            //        int row = 0;
-            //        int column = 0;
-
-            //        phones.ForEach(p => {
-            //            Cart_ProductInCart product = new Cart_ProductInCart();
-            //            Label lblName = (Label)product.Controls.Find("lblName", true).FirstOrDefault();
-            //            Label lblPrice = (Label)product.Controls.Find("lblPrice", true).FirstOrDefault();
-            //            PictureBox pctProduct = (PictureBox)product.Controls.Find("pcbProduct", true).FirstOrDefault();
-            //            lblName.Text = p.Phone_Name;
-            //            lblPrice.Text = PriceFormat(p.Phone_Price);
-                        
-            //            // Tính toán vị trí của sản phẩm
-            //            int x = 0, y = 0;
-            //            if (column == 0)
-            //            {
-            //                x = offsetRowForFirstItem;
-            //            }
-            //            else
-            //            {
-            //                x = column * (itemWidth + horizontalSpacing) + offsetRowForFirstItem;
-            //            }
-            //            if (row == 0)
-            //            {
-            //                y = offsetColumnForFirstItem;
-            //            }
-            //            else
-            //            {
-            //                y = row * (itemHeight + verticalSpacing) + offsetColumnForFirstItem;
-            //            }
-
-            //            // Đặt vị trí của sản phẩm trong panel1
-            //            product.Location = new Point(x, y);
-
-            //            // Thêm sản phẩm vào panel1
-            //            //pnlProduct.Controls.Add(product);
+            int row = 0;
+            int column = 0;
+            Cart_ProductInCart product = new Cart_ProductInCart();
+            Label lblName = (Label)product.Controls.Find("lblName", true).FirstOrDefault();
+            Label lblPrice = (Label)product.Controls.Find("lblPrice", true).FirstOrDefault();
+            PictureBox pctProduct = (PictureBox)product.Controls.Find("pcbProduct", true).FirstOrDefault();
 
 
-            //            // Di chuyển sang hàng và cột tiếp theo
-            //            column++;
-            //            if (column >= maxColumns)
-            //            {
-            //                column = 0;
-            //                row++;
-            //            }
 
-            //        });
-            //    }
-            //    catch
-            //    {
+            lblName.Text = "A";
+            lblPrice.Text = "b";
+            // Tính toán vị trí của sản phẩm
+            int x = 0, y = 0;
+            if (column == 0)
+            {
+                x = offsetRowForFirstItem;
+            }
+            else
+            {
+                x = column * (itemWidth + horizontalSpacing) + offsetRowForFirstItem;
+            }
+            if (row == 0)
+            {
+                y = offsetColumnForFirstItem;
+            }
+            else
+            {
+                y = row * (itemHeight + verticalSpacing) + offsetColumnForFirstItem;
+            }
 
-            //    }
-            //}
+            // Đặt vị trí của sản phẩm trong panel1
+            product.Location = new Point(x, y);
+            Cart productInCart = new Cart();
+
+            Panel pnlProduct = (Panel)productInCart.Controls.Find("pnlProduct", true).FirstOrDefault();
+            pnlProduct.Controls.Add(product);
+            //Di chuyển sang hàng và cột tiếp theo
+            column++;
+            if (column >= maxColumns)
+            {
+                column = 0;
+                row++;
+            }
+            pnlProduct.Refresh();
+
         }
         private void ClearPanel()
         {
-            //pnlProduct.Controls.Clear();
+            pnlProduct.Controls.Clear();
         }
 
         private void LoadUI()
         {
             ClearPanel();
             productsByManufacturerName = DAO.QueryPhoneTableBySearchKeywordOrByManuFacturerNameAndFilterByPrice(KEYWORD, MANUFACTURER_NAME, SORT_BY);
-            SetPhoneGrid(productsByManufacturerName, ITEM_WIDTH, ITEM_HEIGHT, HORIZONTAL_SPACING, VERTICAL_SPACING, MAX_COLUMNS_IN_PHONES_GRID);
+            getPhoneToCart(productsByManufacturerName, ITEM_WIDTH, ITEM_HEIGHT, HORIZONTAL_SPACING, VERTICAL_SPACING, MAX_COLUMNS_IN_PHONES_GRID);
         }
+        private void pnlProduct_Click(object sender, EventArgs e)
+        {
+            LoadUI();
+        }
+        private void pnlProduct_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void Cart_Load(object sender, EventArgs e)
         {
             //LoadUI();

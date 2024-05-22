@@ -451,6 +451,8 @@ namespace WindowsFormsApp1
             this.pnlProduct.Name = "pnlProduct";
             this.pnlProduct.Size = new System.Drawing.Size(764, 169);
             this.pnlProduct.TabIndex = 51;
+            this.pnlProduct.Click += new System.EventHandler(this.pnlProduct_Click);
+            this.pnlProduct.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlProduct_Paint);
             // 
             // btnOrder
             // 
@@ -532,7 +534,7 @@ namespace WindowsFormsApp1
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Cart";
-            this.Size = new System.Drawing.Size(1171, 596);
+            this.Size = new System.Drawing.Size(1150, 596);
             this.Load += new System.EventHandler(this.Cart_Load);
             this.SizeChanged += new System.EventHandler(this.Cart_SizeChanged);
             this.pnlCustomerDetail.ResumeLayout(false);

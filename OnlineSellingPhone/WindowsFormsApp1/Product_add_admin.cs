@@ -66,7 +66,7 @@ namespace WindowsFormsApp1
             if (lblNoName.Visible == false && lblNoManufacturer.Visible == false && lblNoColor.Visible == false && lblNoPrice.Visible == false && lblNoQuantity.Visible == false && lblNoLinkImage1.Visible == false && lblNoLinkImage2.Visible == false && lblNoRAM.Visible == false && lblNoROM.Visible == false)
             {
                 MessageBox.Show("Thêm sản phẩm thành công");
-                DAO.AddPhone(txtName.Text, ManufacturerID, colorCode, Convert.ToDouble(txtPrice.Text), Convert.ToInt32(nudQuantity.Value), txtLinkImage1.Text, Convert.ToInt32(txtRAM.Text), Convert.ToInt32(txtROM.Text), txtLinkImage2.Text);
+                DAO.AddPhone(txtName.Text, ManufacturerID, colorCode, Convert.ToDouble(txtPrice.Text), Convert.ToInt32(nudQuantity.Value), txtLinkImage1.Text, Convert.ToInt32(txtRAM.Text), Convert.ToInt32(txtROM.Text), txtLinkImage2.Text, true);
                 //Mall newMall = new Mall();
                 //newMall.refreshMall();
             }
@@ -198,8 +198,8 @@ namespace WindowsFormsApp1
         }
         private void btnClearLinkImage2_Click(object sender, EventArgs e)
         {
-            txtLinkImage2.Text = "Link URL hình ảnh 2";
-            txtLinkImage2.ForeColor = Color.DarkGray;
+            //txtLinkImage2.Text = "Link URL hình ảnh 2";
+            //txtLinkImage2.ForeColor = Color.DarkGray;
             txtLinkImage2.Visible = false;
             lblNoLinkImage2.Visible = false;
             btnClearLinkImage2.Visible = false;
@@ -265,11 +265,11 @@ namespace WindowsFormsApp1
 
         private void txtLinkImage2_Leave(object sender, EventArgs e)
         {
-            if (txtLinkImage2.Text == "")
-            {
-                txtLinkImage2.Text = "Link URL hình ảnh 2";
-                txtLinkImage2.ForeColor = Color.DarkGray;
-            }
+            //if (txtLinkImage2.Text == "")
+            //{
+            //    txtLinkImage2.Text = "Link URL hình ảnh 2";
+            //    txtLinkImage2.ForeColor = Color.DarkGray;
+            //}
         }
 
         private void txtLinkImage1_TextChanged(object sender, EventArgs e)
@@ -282,7 +282,7 @@ namespace WindowsFormsApp1
 
         private void txtLinkImage2_TextChanged(object sender, EventArgs e)
         {
-            if (txtLinkImage2.Text == "" || txtLinkImage2.Text == "Link URL hình ảnh 2")
+            if (txtLinkImage2.Text == "" /*|| txtLinkImage2.Text == "Link URL hình ảnh 2"*/)
                 lblNoLinkImage2.Visible = true;
             else
                 lblNoLinkImage2.Visible = false;

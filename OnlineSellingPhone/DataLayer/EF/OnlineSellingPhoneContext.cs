@@ -26,7 +26,6 @@ namespace DataLayer.EF
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
         public DbSet<Configuration> Configurations { get; set; }
-        public DbSet<PhoneConfiguration> PhoneConfigurations { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

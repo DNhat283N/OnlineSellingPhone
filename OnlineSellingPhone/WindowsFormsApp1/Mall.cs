@@ -160,6 +160,10 @@ namespace WindowsFormsApp1
             SetPhoneGrid(productsByManufacturerName, ITEM_WIDTH, ITEM_HEIGHT, HORIZONTAL_SPACING, VERTICAL_SPACING, MAX_COLUMNS_IN_PHONES_GRID);
         }
 
+        private void Mall_Load(object sender, EventArgs e)
+        {
+            LoadUI();
+        }
         private void ShowSuggestions(string searchText)
         {
             suggestionPhoneList.Clear();
@@ -246,10 +250,7 @@ namespace WindowsFormsApp1
 
         bool isButtonClicked = false;
 
-        private void Mall_Load(object sender, EventArgs e)
-        {
-            LoadUI();
-        }
+
 
         private void btnClickEvent(object sender, EventArgs e)
         {
