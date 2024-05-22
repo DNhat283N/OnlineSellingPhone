@@ -30,19 +30,28 @@ namespace DataLayer.Enities
         public int Phone_ReadyInStock { get; set; }
         [Column]
         [Required]
+        public bool Phone_Active { get; set; }
+        [Column]
+        [Required]
         public int Manufacturer_ID { get; set; }
         [ForeignKey("Manufacturer_ID")]
         public virtual Manufacturer Manufacturer { get; set; }
 
+        public int Configuration_ID { get; set; }
+        [ForeignKey("Configuration_ID")]
+        public virtual Configuration Configuration { get; set; }
+
 
         public Phone() { }
-        public Phone(string phone_Name, string phone_Color, double phone_Price, int phone_ReadyInStock, int manufacturer_ID)
+        public Phone(string phone_Name, string phone_Color, double phone_Price, int phone_ReadyInStock, int manufacturer_ID, int config_ID, bool isActive = true)
         {
             Phone_Name = phone_Name;
             Phone_Color = phone_Color;
             Phone_Price = phone_Price;
             Phone_ReadyInStock = phone_ReadyInStock;
+            Phone_Active = isActive;
             Manufacturer_ID = manufacturer_ID;
+            Configuration_ID = config_ID;
         }
     }
 }
