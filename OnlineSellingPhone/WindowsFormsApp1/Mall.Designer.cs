@@ -49,8 +49,6 @@ namespace WindowsFormsApp1
             this.mall_Product3 = new WindowsFormsApp1.Mall_Product();
             this.mall_Product2 = new WindowsFormsApp1.Mall_Product();
             this.mall_Product1 = new WindowsFormsApp1.Mall_Product();
-            this.mall_Product10 = new WindowsFormsApp1.Mall_Product();
-            this.pnlProduct.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtSearch
@@ -70,7 +68,6 @@ namespace WindowsFormsApp1
             // 
             this.pnlProduct.AutoScroll = true;
             this.pnlProduct.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pnlProduct.Controls.Add(this.mall_Product10);
             this.pnlProduct.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlProduct.Location = new System.Drawing.Point(0, 152);
             this.pnlProduct.Name = "pnlProduct";
@@ -345,17 +342,6 @@ namespace WindowsFormsApp1
             this.mall_Product1.Size = new System.Drawing.Size(357, 357);
             this.mall_Product1.TabIndex = 8;
             // 
-            // mall_Product10
-            // 
-            this.mall_Product10.AutoSize = true;
-            this.mall_Product10.BackColor = System.Drawing.Color.White;
-            this.mall_Product10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mall_Product10.Location = new System.Drawing.Point(58, 31);
-            this.mall_Product10.Margin = new System.Windows.Forms.Padding(4);
-            this.mall_Product10.Name = "mall_Product10";
-            this.mall_Product10.Size = new System.Drawing.Size(357, 357);
-            this.mall_Product10.TabIndex = 0;
-            // 
             // Mall
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
@@ -376,8 +362,6 @@ namespace WindowsFormsApp1
             this.Name = "Mall";
             this.Size = new System.Drawing.Size(1171, 596);
             this.Load += new System.EventHandler(this.Mall_Load);
-            this.pnlProduct.ResumeLayout(false);
-            this.pnlProduct.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -405,6 +389,5 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Panel pnlProduct;
         private System.Windows.Forms.Label lblClearSearch;
         private System.Windows.Forms.ListBox lsbSuggestions;
-        private Mall_Product mall_Product10;
     }
 }

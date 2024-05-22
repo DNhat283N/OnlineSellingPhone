@@ -41,6 +41,9 @@ namespace WindowsFormsApp1
             this.lblNoAddress = new System.Windows.Forms.Label();
             this.lblNoPhonenumber = new System.Windows.Forms.Label();
             this.lblNoName = new System.Windows.Forms.Label();
+            this.btnOrder = new WindowsFormsApp1.DSButton();
+            this.btnPaypal = new WindowsFormsApp1.DSButton();
+            this.btnPayCash = new WindowsFormsApp1.DSButton();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txtNote = new System.Windows.Forms.TextBox();
@@ -54,9 +57,6 @@ namespace WindowsFormsApp1
             this.txtName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.btnOrder = new WindowsFormsApp1.DSButton();
-            this.btnPaypal = new WindowsFormsApp1.DSButton();
-            this.btnPayCash = new WindowsFormsApp1.DSButton();
             this.pnlCustomerDetail.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -215,6 +215,67 @@ namespace WindowsFormsApp1
             this.lblNoName.Size = new System.Drawing.Size(140, 17);
             this.lblNoName.TabIndex = 40;
             this.lblNoName.Text = "* Vui lòng nhập tên";
+            // 
+            // btnOrder
+            // 
+            this.btnOrder.BackColor = System.Drawing.Color.Coral;
+            this.btnOrder.BackgroundColor = System.Drawing.Color.Coral;
+            this.btnOrder.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnOrder.BorderRadius = 20;
+            this.btnOrder.BorderSize = 0;
+            this.btnOrder.FlatAppearance.BorderSize = 0;
+            this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrder.ForeColor = System.Drawing.Color.White;
+            this.btnOrder.Location = new System.Drawing.Point(403, 426);
+            this.btnOrder.Name = "btnOrder";
+            this.btnOrder.Size = new System.Drawing.Size(171, 58);
+            this.btnOrder.TabIndex = 39;
+            this.btnOrder.Text = "Đặt hàng";
+            this.btnOrder.TextColor = System.Drawing.Color.White;
+            this.btnOrder.UseVisualStyleBackColor = false;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
+            // 
+            // btnPaypal
+            // 
+            this.btnPaypal.BackColor = System.Drawing.Color.White;
+            this.btnPaypal.BackgroundColor = System.Drawing.Color.White;
+            this.btnPaypal.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPaypal.BorderRadius = 20;
+            this.btnPaypal.BorderSize = 1;
+            this.btnPaypal.FlatAppearance.BorderSize = 0;
+            this.btnPaypal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPaypal.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPaypal.ForeColor = System.Drawing.Color.Black;
+            this.btnPaypal.Location = new System.Drawing.Point(505, 296);
+            this.btnPaypal.Name = "btnPaypal";
+            this.btnPaypal.Size = new System.Drawing.Size(159, 50);
+            this.btnPaypal.TabIndex = 38;
+            this.btnPaypal.Tag = "";
+            this.btnPaypal.Text = "Momo";
+            this.btnPaypal.TextColor = System.Drawing.Color.Black;
+            this.btnPaypal.UseVisualStyleBackColor = false;
+            this.btnPaypal.Click += new System.EventHandler(this.btnPaypal_Click);
+            // 
+            // btnPayCash
+            // 
+            this.btnPayCash.BackColor = System.Drawing.Color.White;
+            this.btnPayCash.BackgroundColor = System.Drawing.Color.White;
+            this.btnPayCash.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPayCash.BorderRadius = 20;
+            this.btnPayCash.BorderSize = 1;
+            this.btnPayCash.FlatAppearance.BorderSize = 0;
+            this.btnPayCash.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPayCash.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPayCash.ForeColor = System.Drawing.Color.Black;
+            this.btnPayCash.Location = new System.Drawing.Point(319, 296);
+            this.btnPayCash.Name = "btnPayCash";
+            this.btnPayCash.Size = new System.Drawing.Size(159, 50);
+            this.btnPayCash.TabIndex = 37;
+            this.btnPayCash.Tag = "";
+            this.btnPayCash.Text = "Khi nhận hàng";
+            this.btnPayCash.TextColor = System.Drawing.Color.Black;
+            this.btnPayCash.UseVisualStyleBackColor = false;
+            this.btnPayCash.Click += new System.EventHandler(this.btnPayCash_Click);
             // 
             // label10
             // 
@@ -410,67 +471,6 @@ namespace WindowsFormsApp1
             this.label11.Size = new System.Drawing.Size(957, 867);
             this.label11.TabIndex = 40;
             // 
-            // btnOrder
-            // 
-            this.btnOrder.BackColor = System.Drawing.Color.Coral;
-            this.btnOrder.BackgroundColor = System.Drawing.Color.Coral;
-            this.btnOrder.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnOrder.BorderRadius = 20;
-            this.btnOrder.BorderSize = 0;
-            this.btnOrder.FlatAppearance.BorderSize = 0;
-            this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOrder.ForeColor = System.Drawing.Color.White;
-            this.btnOrder.Location = new System.Drawing.Point(403, 426);
-            this.btnOrder.Name = "btnOrder";
-            this.btnOrder.Size = new System.Drawing.Size(171, 58);
-            this.btnOrder.TabIndex = 39;
-            this.btnOrder.Text = "Đặt hàng";
-            this.btnOrder.TextColor = System.Drawing.Color.White;
-            this.btnOrder.UseVisualStyleBackColor = false;
-            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
-            // 
-            // btnPaypal
-            // 
-            this.btnPaypal.BackColor = System.Drawing.Color.White;
-            this.btnPaypal.BackgroundColor = System.Drawing.Color.White;
-            this.btnPaypal.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnPaypal.BorderRadius = 20;
-            this.btnPaypal.BorderSize = 1;
-            this.btnPaypal.FlatAppearance.BorderSize = 0;
-            this.btnPaypal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPaypal.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPaypal.ForeColor = System.Drawing.Color.Black;
-            this.btnPaypal.Location = new System.Drawing.Point(505, 296);
-            this.btnPaypal.Name = "btnPaypal";
-            this.btnPaypal.Size = new System.Drawing.Size(159, 50);
-            this.btnPaypal.TabIndex = 38;
-            this.btnPaypal.Tag = "";
-            this.btnPaypal.Text = "Paypal";
-            this.btnPaypal.TextColor = System.Drawing.Color.Black;
-            this.btnPaypal.UseVisualStyleBackColor = false;
-            this.btnPaypal.Click += new System.EventHandler(this.btnPaypal_Click);
-            // 
-            // btnPayCash
-            // 
-            this.btnPayCash.BackColor = System.Drawing.Color.White;
-            this.btnPayCash.BackgroundColor = System.Drawing.Color.White;
-            this.btnPayCash.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnPayCash.BorderRadius = 20;
-            this.btnPayCash.BorderSize = 1;
-            this.btnPayCash.FlatAppearance.BorderSize = 0;
-            this.btnPayCash.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPayCash.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPayCash.ForeColor = System.Drawing.Color.Black;
-            this.btnPayCash.Location = new System.Drawing.Point(319, 296);
-            this.btnPayCash.Name = "btnPayCash";
-            this.btnPayCash.Size = new System.Drawing.Size(159, 50);
-            this.btnPayCash.TabIndex = 37;
-            this.btnPayCash.Tag = "";
-            this.btnPayCash.Text = "Khi nhận hàng";
-            this.btnPayCash.TextColor = System.Drawing.Color.Black;
-            this.btnPayCash.UseVisualStyleBackColor = false;
-            this.btnPayCash.Click += new System.EventHandler(this.btnPayCash_Click);
-            // 
             // Cart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
@@ -486,7 +486,7 @@ namespace WindowsFormsApp1
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Cart";
-            this.Size = new System.Drawing.Size(1171, 596);
+            this.Size = new System.Drawing.Size(1150, 596);
             this.SizeChanged += new System.EventHandler(this.Cart_SizeChanged);
             this.pnlCustomerDetail.ResumeLayout(false);
             this.pnlCustomerDetail.PerformLayout();

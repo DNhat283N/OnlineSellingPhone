@@ -148,17 +148,6 @@
         uPwP8Hj+AWPhuPZoE67VAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="btnClearLinkImage2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EwAACxMBAJqcGAAAARJJREFUWEftl0sKwjAURTt3GerC/KGiDhy5U2eCAz97UATvaRWqJmlMGhTtgYuJ
-        PN69raZNsgYDXWkgrWoWPTuSk4V0lg7SpmbR8yTNJCNcOebDfJaGkUSIdj57oi/timFS9lKvGD6ylNbF
-        MCl44PVCE6AqQOv26YOrNigADbfSJJ+5oYZaW4jgO8DyvEjWdSx8aoIDwN1gns8eYY1XmUNUADCF8DWH
-        6ABQDvGOOdQSAKYSxoixL78RoHzbXX9ME9EBTEvN9J2NqAAuI98QwQF8DHxqggJ8xaPY9YJ5xlUbHKAu
-        mgDWAB/flHJoYMvMUy4VY8m6LQfWLwVHyXS4iBE96V353iBdiqMZP7H1yv+VLLsC6xKmf5yel84AAAAA
-        SUVORK5CYII=
-</value>
-  </data>
   <data name="btnAddLinkImage.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
@@ -171,6 +160,17 @@
         klLzYl7SZsnh93CSIRmRQEzJIwWS27MkGfVQYYGTDD0mlbZQkRGe9el4gQorHKP8VHAgGZSx8LXnkjbY
         XdFHM45RvhNMBymVxZQGMcw5w86z/Pujj2Qees1JhvmjMVbyuhyR/Fj4YyLX7HPu+dXOMwx75kPpR7rk
         pqRhiwx5Hgu4CPYw+Zxh5ZdKYsFDyRYbl9ZMWuEvkCTv+Ly4i4GvVEYAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnClearLinkImage2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EwAACxMBAJqcGAAAARJJREFUWEftl0sKwjAURTt3GerC/KGiDhy5U2eCAz97UATvaRWqJmlMGhTtgYuJ
+        PN69raZNsgYDXWkgrWoWPTuSk4V0lg7SpmbR8yTNJCNcOebDfJaGkUSIdj57oi/timFS9lKvGD6ylNbF
+        MCl44PVCE6AqQOv26YOrNigADbfSJJ+5oYZaW4jgO8DyvEjWdSx8aoIDwN1gns8eYY1XmUNUADCF8DWH
+        6ABQDvGOOdQSAKYSxoixL78RoHzbXX9ME9EBTEvN9J2NqAAuI98QwQF8DHxqggJ8xaPY9YJ5xlUbHKAu
+        mgDWAB/flHJoYMvMUy4VY8m6LQfWLwVHyXS4iBE96V353iBdiqMZP7H1yv+VLLsC6xKmf5yel84AAAAA
+        SUVORK5CYII=
 </value>
   </data>
 </root>

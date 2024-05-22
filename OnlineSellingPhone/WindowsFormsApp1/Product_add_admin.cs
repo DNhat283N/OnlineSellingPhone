@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BusinessLayer;
 
 namespace WindowsFormsApp1
 {
@@ -15,15 +16,10 @@ namespace WindowsFormsApp1
         public Product_add_admin()
         {
             InitializeComponent();
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
 
         }
 
 
- 
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
@@ -63,12 +59,16 @@ namespace WindowsFormsApp1
                 e.Handled = true;
             }    
         }
+        
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (lblNoName.Visible == false && lblNoManufacturer.Visible == false && lblNoColor.Visible == false && lblNoPrice.Visible == false && lblNoQuantity.Visible == false && lblNoLinkImage1.Visible == false && lblNoLinkImage2.Visible == false && lblNoRAM.Visible == false && lblNoROM.Visible == false && lblNoStorage.Visible == false && lblNoBattery.Visible == false)
+            if (lblNoName.Visible == false && lblNoManufacturer.Visible == false && lblNoColor.Visible == false && lblNoPrice.Visible == false && lblNoQuantity.Visible == false && lblNoLinkImage1.Visible == false && lblNoLinkImage2.Visible == false && lblNoRAM.Visible == false && lblNoROM.Visible == false)
             {
                 MessageBox.Show("Thêm sản phẩm thành công");
+                DAO.AddPhone(txtName.Text, ManufacturerID, colorCode, Convert.ToDouble(txtPrice.Text), Convert.ToInt32(nudQuantity.Value), txtLinkImage1.Text, Convert.ToInt32(txtRAM.Text), Convert.ToInt32(txtROM.Text), txtLinkImage2.Text);
+                //Mall newMall = new Mall();
+                //newMall.refreshMall();
             }
             else
             {
@@ -115,9 +115,27 @@ namespace WindowsFormsApp1
             }    
         }
 
+        int ManufacturerID;
         private void cbbManufacturer_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+            switch (cbbManufacturer.SelectedItem)
+            {
+                case "Apple":
+                    ManufacturerID = 1;
+                    break;
+                case "Oppo":
+                    ManufacturerID = 2;
+                    break;
+                case "Realme":
+                    ManufacturerID = 3;
+                    break;
+                case "Samsung":
+                    ManufacturerID = 4;
+                    break;
+                case "Xiaomi":
+                    ManufacturerID = 5;
+                    break;
+            }    
         }
 
         private void cbbManufacturer_TextChanged(object sender, EventArgs e)
@@ -170,29 +188,6 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void txtStorage_TextChanged(object sender, EventArgs e)
-        {
-            if (txtStorage.Text == "")
-            {
-                lblNoStorage.Visible = true;
-            }
-            else
-            {
-                lblNoStorage.Visible = false;
-            }
-        }
-
-        private void txtBattery_TextChanged(object sender, EventArgs e)
-        {
-            if (txtBattery.Text == "")
-            {
-                lblNoBattery.Visible = true;
-            }
-            else
-            {
-                lblNoBattery.Visible = false;
-            }
-        }
 
         private void btnAddLinkImage_Click(object sender, EventArgs e)
         {
@@ -210,7 +205,55 @@ namespace WindowsFormsApp1
             btnClearLinkImage2.Visible = false;
         }
 
+        string colorCode;
 
+        private void cbbColor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbbColor.SelectedItem == "Đen")
+            {
+                colorCode = "#000000";
+            }
+            switch (cbbColor.SelectedItem)
+            {
+                case "Đen":
+                    colorCode = "#000000";
+                    break;
+                case "Đỏ":
+                    colorCode = "#FF0000";
+                    break;
+                case "Hồng":
+                    colorCode = "#FFCCFF";
+                    break;
+                case "Trắng":
+                    colorCode = "#FFFFFF";
+                    break;
+                case "Xám ":
+                    colorCode = "#808080";
+                    break;
+                case "Xanh đen":
+                    colorCode = "#000080";
+                    break;
+                case "Xanh dương":
+                    colorCode = "#0000FF";
+                    break;
+                case "Xanh lá":
+                    colorCode = "#008000";
+                    break;
+            }
+        }
+
+        private void txtLinkImage2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtLinkImage1_TextChanged(object sender, EventArgs e)
+        {
+            if (txtLinkImage1.Text != "")
+            {
+                lblNoLinkImage1.Visible = false;
+            }    
+        }
     }
 
 }

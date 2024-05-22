@@ -262,7 +262,7 @@ namespace WindowsFormsApp1
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Mall_ProductDetail";
-            this.Size = new System.Drawing.Size(1108, 596);
+            this.Size = new System.Drawing.Size(1087, 596);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

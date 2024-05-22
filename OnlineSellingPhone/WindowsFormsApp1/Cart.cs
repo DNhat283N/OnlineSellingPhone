@@ -67,20 +67,23 @@ namespace WindowsFormsApp1
 
         private void btnPaypal_Click(object sender, EventArgs e)
         {
-            if (buttonClicked == false)
-            {
-                btnPaypal.BackgroundColor = Color.DarkGray;
-                btnPayCash.Enabled = false;
-                buttonClicked = true;
-                lblNoPayment.Visible = false;
-            }
-            else
-            {
-                btnPaypal.BackgroundColor = Color.White;
-                btnPayCash.Enabled = true;
-                buttonClicked = false;
-                lblNoPayment.Visible = true;
-            }
+            //if (buttonClicked == false)
+            //{
+            //    btnPaypal.BackgroundColor = Color.DarkGray;
+            //    btnPayCash.Enabled = false;
+            //    buttonClicked = true;
+            //    lblNoPayment.Visible = false;
+            //}
+            //else
+            //{
+            //    btnPaypal.BackgroundColor = Color.White;
+            //    btnPayCash.Enabled = true;
+            //    buttonClicked = false;
+            //    lblNoPayment.Visible = true;
+            //}
+            Cart_Pay_Momo momoQrCode = new Cart_Pay_Momo();
+            momoQrCode.Show();
+
         }
 
             
