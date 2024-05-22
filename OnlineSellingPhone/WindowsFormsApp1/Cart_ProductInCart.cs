@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Product_edit_admin : UserControl
+    public partial class Cart_ProductInCart : UserControl
     {
-        public Product_edit_admin()
+        public Cart_ProductInCart()
         {
             InitializeComponent();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

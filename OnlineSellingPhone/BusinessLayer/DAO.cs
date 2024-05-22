@@ -383,5 +383,16 @@ namespace BusinessLayer
                 db.SaveChanges();
             }
         }
+        //public static Phone QueryPhoneByID(int phoneID)
+        //{
+        //    using (OnlineSellingPhoneContext db = new OnlineSellingPhoneContext())
+        //    {
+        //        var query = from p in db.Phones
+        //                    join c in db.Configurations on p.Configuration_ID equals c.Configuration_ID
+        //                    where p.Phone_ID.Equals(phoneID)
+        //                    select p;
+        //        return query.FirstOrDefault();
+        //    }
+        //}
     }
 }

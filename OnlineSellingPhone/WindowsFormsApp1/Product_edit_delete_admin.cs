@@ -7,31 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BusinessLayer;
 
 namespace WindowsFormsApp1
 {
-    public partial class Product_add_admin : UserControl
+    public partial class Product_edit_delete_admin : Form
     {
-        public Product_add_admin()
+        public Product_edit_delete_admin()
         {
             InitializeComponent();
-
         }
 
 
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            //if (!Form1.Instance.PnlContainer.Controls.ContainsKey("Product_admin"))
-            //{
-                Product_admin Product_admin = new Product_admin();
-                Product_admin.Dock = DockStyle.Fill;
-                Form1.Instance.PnlContainer.Controls.Clear();
-                Form1.Instance.PnlContainer.Controls.Add(Product_admin);
-            //}
-            Form1.Instance.PnlContainer.Controls["Product_admin"].BringToFront();
-        }
 
         //private void txtColor_TextChanged(object sender, EventArgs e)
         //{
@@ -50,30 +36,14 @@ namespace WindowsFormsApp1
         //    }    
         //}
 
-     
+
 
         private void txtPrice_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && e.KeyChar != '\b')
             {
                 e.Handled = true;
-            }    
-        }
-        
-
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            if (lblNoName.Visible == false && lblNoManufacturer.Visible == false && lblNoColor.Visible == false && lblNoPrice.Visible == false && lblNoQuantity.Visible == false && lblNoLinkImage1.Visible == false && lblNoLinkImage2.Visible == false && lblNoRAM.Visible == false && lblNoROM.Visible == false)
-            {
-                MessageBox.Show("Thêm sản phẩm thành công");
-                DAO.AddPhone(txtName.Text, ManufacturerID, colorCode, Convert.ToDouble(txtPrice.Text), Convert.ToInt32(nudQuantity.Value), txtLinkImage1.Text, Convert.ToInt32(txtRAM.Text), Convert.ToInt32(txtROM.Text), txtLinkImage2.Text);
-                //Mall newMall = new Mall();
-                //newMall.refreshMall();
             }
-            else
-            {
-                MessageBox.Show("Thêm sản phẩm thất bại! Vui lòng kiểm tra lại thông tin đã nhập");
-            }    
         }
 
         private void txtName_TextChanged(object sender, EventArgs e)
@@ -81,26 +51,19 @@ namespace WindowsFormsApp1
             if (txtName.Text == "")
             {
                 lblNoName.Visible = true;
-            }    
+            }
             else
             {
                 lblNoName.Visible = false;
-            }    
+            }
         }
 
-     
+
 
 
         private void txtPrice_TextChanged(object sender, EventArgs e)
         {
-            if (txtPrice.Text == "")
-            {
-                lblNoPrice.Visible = true;
-            }    
-            else
-            {
-                lblNoPrice.Visible = false;
-            }    
+
         }
 
         private void nudQuantity_ValueChanged(object sender, EventArgs e)
@@ -108,11 +71,11 @@ namespace WindowsFormsApp1
             if (nudQuantity.Value == 0)
             {
                 lblNoQuantity.Visible = true;
-            }    
+            }
             else
             {
                 lblNoQuantity.Visible = false;
-            }    
+            }
         }
 
         int ManufacturerID;
@@ -135,7 +98,7 @@ namespace WindowsFormsApp1
                 case "Xiaomi":
                     ManufacturerID = 5;
                     break;
-            }    
+            }
         }
 
         private void cbbManufacturer_TextChanged(object sender, EventArgs e)
@@ -286,6 +249,11 @@ namespace WindowsFormsApp1
                 lblNoLinkImage2.Visible = true;
             else
                 lblNoLinkImage2.Visible = false;
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

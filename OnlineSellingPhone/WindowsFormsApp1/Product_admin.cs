@@ -101,6 +101,37 @@ namespace WindowsFormsApp1
                         // Thêm sản phẩm vào panel1
                         pnlProduct.Controls.Add(product);
 
+                        product.Click += (sender, e) =>
+                        {
+                            Product_edit_delete_admin form = new Product_edit_delete_admin();
+                            form.Show();
+                        };
+
+                        lblName.Click += (sender, e) =>
+                        {
+                            Product_edit_delete_admin form = new Product_edit_delete_admin();
+                            form.Show();
+                        };
+
+                        lblPrice.Click += (sender, e) =>
+                        {
+                            Product_edit_delete_admin form = new Product_edit_delete_admin();
+                            form.Show();
+                        };
+
+                        pctProduct.Click += (sender, e) =>
+                        {
+                            Product_edit_delete_admin form = new Product_edit_delete_admin();
+                            form.Show();
+                        };
+
+                        Panel pnlProductClick = (Panel)product.Controls.Find("pnlProduct", true).FirstOrDefault();
+                        pnlProductClick.Click += (sender, e) =>
+                        {
+                            Product_edit_delete_admin form = new Product_edit_delete_admin();
+                            form.Show();
+                        };
+
                         // Di chuyển sang hàng và cột tiếp theo
                         column++;
                         if (column >= maxColumns)

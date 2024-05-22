@@ -81,7 +81,7 @@ namespace WindowsFormsApp1
             this.btnProduct_admin.Name = "btnProduct_admin";
             this.btnProduct_admin.Size = new System.Drawing.Size(188, 54);
             this.btnProduct_admin.TabIndex = 4;
-            this.btnProduct_admin.Text = "     Product";
+            this.btnProduct_admin.Text = "    Sản phẩm";
             this.btnProduct_admin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnProduct_admin.UseVisualStyleBackColor = true;
             this.btnProduct_admin.Click += new System.EventHandler(this.btnProduct_admin_Click);
@@ -118,7 +118,7 @@ namespace WindowsFormsApp1
             this.btnAccount.Name = "btnAccount";
             this.btnAccount.Size = new System.Drawing.Size(188, 54);
             this.btnAccount.TabIndex = 3;
-            this.btnAccount.Text = "     Account";
+            this.btnAccount.Text = "    Tài khoản";
             this.btnAccount.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAccount.UseVisualStyleBackColor = true;
             this.btnAccount.Click += new System.EventHandler(this.btnAccount_Click);
@@ -136,7 +136,7 @@ namespace WindowsFormsApp1
             this.btnCart.Name = "btnCart";
             this.btnCart.Size = new System.Drawing.Size(188, 54);
             this.btnCart.TabIndex = 2;
-            this.btnCart.Text = "       Cart";
+            this.btnCart.Text = "     Giỏ hàng";
             this.btnCart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCart.UseVisualStyleBackColor = true;
             this.btnCart.Click += new System.EventHandler(this.btnCart_Click);
@@ -154,7 +154,7 @@ namespace WindowsFormsApp1
             this.btnMall.Name = "btnMall";
             this.btnMall.Size = new System.Drawing.Size(188, 54);
             this.btnMall.TabIndex = 2;
-            this.btnMall.Text = "       Mall";
+            this.btnMall.Text = "     Cửa hàng";
             this.btnMall.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMall.UseVisualStyleBackColor = true;
             this.btnMall.Click += new System.EventHandler(this.btnMall_Click);
@@ -172,7 +172,7 @@ namespace WindowsFormsApp1
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(188, 54);
             this.btnHome.TabIndex = 2;
-            this.btnHome.Text = "       Home";
+            this.btnHome.Text = "     Trang chủ";
             this.btnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);

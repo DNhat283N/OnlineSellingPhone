@@ -29,7 +29,6 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mall_Product));
             this.pnlProduct = new System.Windows.Forms.Panel();
             this.lblPrice = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
@@ -75,7 +74,6 @@ namespace WindowsFormsApp1
             // 
             // pcbProduct
             // 
-            this.pcbProduct.Image = ((System.Drawing.Image)(resources.GetObject("pcbProduct.Image")));
             this.pcbProduct.Location = new System.Drawing.Point(51, 18);
             this.pcbProduct.Name = "pcbProduct";
             this.pcbProduct.Size = new System.Drawing.Size(210, 202);

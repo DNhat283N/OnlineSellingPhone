@@ -29,7 +29,6 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
-            this.fpnlProductCart = new System.Windows.Forms.FlowLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,9 +40,6 @@ namespace WindowsFormsApp1
             this.lblNoAddress = new System.Windows.Forms.Label();
             this.lblNoPhonenumber = new System.Windows.Forms.Label();
             this.lblNoName = new System.Windows.Forms.Label();
-            this.btnOrder = new WindowsFormsApp1.DSButton();
-            this.btnPaypal = new WindowsFormsApp1.DSButton();
-            this.btnPayCash = new WindowsFormsApp1.DSButton();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txtNote = new System.Windows.Forms.TextBox();
@@ -57,20 +53,16 @@ namespace WindowsFormsApp1
             this.txtName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.lblTotalProduct = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.lblTotalPrice = new System.Windows.Forms.Label();
+            this.pnlProduct = new System.Windows.Forms.Panel();
+            this.btnOrder = new WindowsFormsApp1.DSButton();
+            this.btnPaypal = new WindowsFormsApp1.DSButton();
+            this.btnPayCash = new WindowsFormsApp1.DSButton();
             this.pnlCustomerDetail.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // fpnlProductCart
-            // 
-            this.fpnlProductCart.AutoSize = true;
-            this.fpnlProductCart.BackColor = System.Drawing.Color.White;
-            this.fpnlProductCart.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.fpnlProductCart.Location = new System.Drawing.Point(106, 167);
-            this.fpnlProductCart.Margin = new System.Windows.Forms.Padding(0);
-            this.fpnlProductCart.Name = "fpnlProductCart";
-            this.fpnlProductCart.Size = new System.Drawing.Size(957, 169);
-            this.fpnlProductCart.TabIndex = 6;
-            this.fpnlProductCart.SizeChanged += new System.EventHandler(this.flowLayoutPanel1_SizeChanged);
             // 
             // label2
             // 
@@ -106,7 +98,7 @@ namespace WindowsFormsApp1
             // label4
             // 
             this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(106, 345);
+            this.label4.Location = new System.Drawing.Point(106, 426);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(957, 23);
             this.label4.TabIndex = 8;
@@ -139,7 +131,7 @@ namespace WindowsFormsApp1
             this.pnlCustomerDetail.Controls.Add(this.label6);
             this.pnlCustomerDetail.Controls.Add(this.txtName);
             this.pnlCustomerDetail.Controls.Add(this.label5);
-            this.pnlCustomerDetail.Location = new System.Drawing.Point(106, 381);
+            this.pnlCustomerDetail.Location = new System.Drawing.Point(106, 462);
             this.pnlCustomerDetail.Name = "pnlCustomerDetail";
             this.pnlCustomerDetail.Size = new System.Drawing.Size(957, 523);
             this.pnlCustomerDetail.TabIndex = 9;
@@ -215,67 +207,6 @@ namespace WindowsFormsApp1
             this.lblNoName.Size = new System.Drawing.Size(140, 17);
             this.lblNoName.TabIndex = 40;
             this.lblNoName.Text = "* Vui lòng nhập tên";
-            // 
-            // btnOrder
-            // 
-            this.btnOrder.BackColor = System.Drawing.Color.Coral;
-            this.btnOrder.BackgroundColor = System.Drawing.Color.Coral;
-            this.btnOrder.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnOrder.BorderRadius = 20;
-            this.btnOrder.BorderSize = 0;
-            this.btnOrder.FlatAppearance.BorderSize = 0;
-            this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOrder.ForeColor = System.Drawing.Color.White;
-            this.btnOrder.Location = new System.Drawing.Point(403, 426);
-            this.btnOrder.Name = "btnOrder";
-            this.btnOrder.Size = new System.Drawing.Size(171, 58);
-            this.btnOrder.TabIndex = 39;
-            this.btnOrder.Text = "Đặt hàng";
-            this.btnOrder.TextColor = System.Drawing.Color.White;
-            this.btnOrder.UseVisualStyleBackColor = false;
-            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
-            // 
-            // btnPaypal
-            // 
-            this.btnPaypal.BackColor = System.Drawing.Color.White;
-            this.btnPaypal.BackgroundColor = System.Drawing.Color.White;
-            this.btnPaypal.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnPaypal.BorderRadius = 20;
-            this.btnPaypal.BorderSize = 1;
-            this.btnPaypal.FlatAppearance.BorderSize = 0;
-            this.btnPaypal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPaypal.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPaypal.ForeColor = System.Drawing.Color.Black;
-            this.btnPaypal.Location = new System.Drawing.Point(505, 296);
-            this.btnPaypal.Name = "btnPaypal";
-            this.btnPaypal.Size = new System.Drawing.Size(159, 50);
-            this.btnPaypal.TabIndex = 38;
-            this.btnPaypal.Tag = "";
-            this.btnPaypal.Text = "Momo";
-            this.btnPaypal.TextColor = System.Drawing.Color.Black;
-            this.btnPaypal.UseVisualStyleBackColor = false;
-            this.btnPaypal.Click += new System.EventHandler(this.btnPaypal_Click);
-            // 
-            // btnPayCash
-            // 
-            this.btnPayCash.BackColor = System.Drawing.Color.White;
-            this.btnPayCash.BackgroundColor = System.Drawing.Color.White;
-            this.btnPayCash.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnPayCash.BorderRadius = 20;
-            this.btnPayCash.BorderSize = 1;
-            this.btnPayCash.FlatAppearance.BorderSize = 0;
-            this.btnPayCash.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPayCash.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPayCash.ForeColor = System.Drawing.Color.Black;
-            this.btnPayCash.Location = new System.Drawing.Point(319, 296);
-            this.btnPayCash.Name = "btnPayCash";
-            this.btnPayCash.Size = new System.Drawing.Size(159, 50);
-            this.btnPayCash.TabIndex = 37;
-            this.btnPayCash.Tag = "";
-            this.btnPayCash.Text = "Khi nhận hàng";
-            this.btnPayCash.TextColor = System.Drawing.Color.Black;
-            this.btnPayCash.UseVisualStyleBackColor = false;
-            this.btnPayCash.Click += new System.EventHandler(this.btnPayCash_Click);
             // 
             // label10
             // 
@@ -471,22 +402,138 @@ namespace WindowsFormsApp1
             this.label11.Size = new System.Drawing.Size(957, 867);
             this.label11.TabIndex = 40;
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(154, 362);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(147, 23);
+            this.label13.TabIndex = 47;
+            this.label13.Text = "Tổng sản phẩm";
+            // 
+            // lblTotalProduct
+            // 
+            this.lblTotalProduct.AutoSize = true;
+            this.lblTotalProduct.BackColor = System.Drawing.Color.White;
+            this.lblTotalProduct.Location = new System.Drawing.Point(340, 362);
+            this.lblTotalProduct.Name = "lblTotalProduct";
+            this.lblTotalProduct.Size = new System.Drawing.Size(147, 23);
+            this.lblTotalProduct.TabIndex = 48;
+            this.lblTotalProduct.Text = "Tổng sản phẩm";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(154, 403);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(89, 23);
+            this.label15.TabIndex = 49;
+            this.label15.Text = "Tổng tiền";
+            // 
+            // lblTotalPrice
+            // 
+            this.lblTotalPrice.AutoSize = true;
+            this.lblTotalPrice.BackColor = System.Drawing.Color.White;
+            this.lblTotalPrice.ForeColor = System.Drawing.Color.Red;
+            this.lblTotalPrice.Location = new System.Drawing.Point(340, 403);
+            this.lblTotalPrice.Name = "lblTotalPrice";
+            this.lblTotalPrice.Size = new System.Drawing.Size(89, 23);
+            this.lblTotalPrice.TabIndex = 50;
+            this.lblTotalPrice.Text = "Tổng tiền";
+            // 
+            // pnlProduct
+            // 
+            this.pnlProduct.AutoScroll = true;
+            this.pnlProduct.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.pnlProduct.Location = new System.Drawing.Point(198, 169);
+            this.pnlProduct.Name = "pnlProduct";
+            this.pnlProduct.Size = new System.Drawing.Size(764, 169);
+            this.pnlProduct.TabIndex = 51;
+            // 
+            // btnOrder
+            // 
+            this.btnOrder.BackColor = System.Drawing.Color.Coral;
+            this.btnOrder.BackgroundColor = System.Drawing.Color.Coral;
+            this.btnOrder.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnOrder.BorderRadius = 20;
+            this.btnOrder.BorderSize = 0;
+            this.btnOrder.FlatAppearance.BorderSize = 0;
+            this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrder.ForeColor = System.Drawing.Color.White;
+            this.btnOrder.Location = new System.Drawing.Point(403, 426);
+            this.btnOrder.Name = "btnOrder";
+            this.btnOrder.Size = new System.Drawing.Size(171, 58);
+            this.btnOrder.TabIndex = 39;
+            this.btnOrder.Text = "Đặt hàng";
+            this.btnOrder.TextColor = System.Drawing.Color.White;
+            this.btnOrder.UseVisualStyleBackColor = false;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
+            // 
+            // btnPaypal
+            // 
+            this.btnPaypal.BackColor = System.Drawing.Color.White;
+            this.btnPaypal.BackgroundColor = System.Drawing.Color.White;
+            this.btnPaypal.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPaypal.BorderRadius = 20;
+            this.btnPaypal.BorderSize = 1;
+            this.btnPaypal.FlatAppearance.BorderSize = 0;
+            this.btnPaypal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPaypal.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPaypal.ForeColor = System.Drawing.Color.Black;
+            this.btnPaypal.Location = new System.Drawing.Point(505, 296);
+            this.btnPaypal.Name = "btnPaypal";
+            this.btnPaypal.Size = new System.Drawing.Size(159, 50);
+            this.btnPaypal.TabIndex = 38;
+            this.btnPaypal.Tag = "";
+            this.btnPaypal.Text = "Momo";
+            this.btnPaypal.TextColor = System.Drawing.Color.Black;
+            this.btnPaypal.UseVisualStyleBackColor = false;
+            this.btnPaypal.Click += new System.EventHandler(this.btnPaypal_Click);
+            // 
+            // btnPayCash
+            // 
+            this.btnPayCash.BackColor = System.Drawing.Color.White;
+            this.btnPayCash.BackgroundColor = System.Drawing.Color.White;
+            this.btnPayCash.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPayCash.BorderRadius = 20;
+            this.btnPayCash.BorderSize = 1;
+            this.btnPayCash.FlatAppearance.BorderSize = 0;
+            this.btnPayCash.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPayCash.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPayCash.ForeColor = System.Drawing.Color.Black;
+            this.btnPayCash.Location = new System.Drawing.Point(319, 296);
+            this.btnPayCash.Name = "btnPayCash";
+            this.btnPayCash.Size = new System.Drawing.Size(159, 50);
+            this.btnPayCash.TabIndex = 37;
+            this.btnPayCash.Tag = "";
+            this.btnPayCash.Text = "Khi nhận hàng";
+            this.btnPayCash.TextColor = System.Drawing.Color.Black;
+            this.btnPayCash.UseVisualStyleBackColor = false;
+            this.btnPayCash.Click += new System.EventHandler(this.btnPayCash_Click);
+            // 
             // Cart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.Controls.Add(this.pnlProduct);
+            this.Controls.Add(this.lblTotalPrice);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.lblTotalProduct);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.pnlCustomerDetail);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.fpnlProductCart);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label11);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Cart";
-            this.Size = new System.Drawing.Size(1150, 596);
+            this.Size = new System.Drawing.Size(1171, 596);
+            this.Load += new System.EventHandler(this.Cart_Load);
             this.SizeChanged += new System.EventHandler(this.Cart_SizeChanged);
             this.pnlCustomerDetail.ResumeLayout(false);
             this.pnlCustomerDetail.PerformLayout();
@@ -496,8 +543,6 @@ namespace WindowsFormsApp1
         }
 
         #endregion
-
-        private System.Windows.Forms.FlowLayoutPanel fpnlProductCart;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
@@ -525,5 +570,10 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label lblNoCity;
         private System.Windows.Forms.Label lblNoAddress;
         private System.Windows.Forms.Label lblNoPayment;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblTotalProduct;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lblTotalPrice;
+        private System.Windows.Forms.Panel pnlProduct;
     }
 }

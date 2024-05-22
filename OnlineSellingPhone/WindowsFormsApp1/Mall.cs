@@ -103,9 +103,40 @@ namespace WindowsFormsApp1
                         product.Location = new Point(x, y);
 
                         // Thêm sản phẩm vào panel1
-                            pnlProduct.Controls.Add(product);
+                        pnlProduct.Controls.Add(product);
 
-                       
+
+                        product.Click += (sender, e) =>
+                        {
+                            Mall_ProductDetail form = new Mall_ProductDetail();
+                            form.Show();
+                        };
+
+                        lblName.Click += (sender, e) =>
+                        {
+                            Mall_ProductDetail form = new Mall_ProductDetail();
+                            form.Show();
+                        };
+
+                        lblPrice.Click += (sender, e) =>
+                        {
+                            Mall_ProductDetail form = new Mall_ProductDetail();
+                            form.Show();
+                        };
+
+                        pctProduct.Click += (sender, e) =>
+                        {
+                            Mall_ProductDetail form = new Mall_ProductDetail();
+                            form.Show();
+                        };
+
+                        Panel pnlProductClick = (Panel)product.Controls.Find("pnlProduct", true).FirstOrDefault();
+                        pnlProductClick.Click += (sender, e) =>
+                        {
+                            Mall_ProductDetail form = new Mall_ProductDetail();
+                            form.Show();
+                        };
+
                         // Di chuyển sang hàng và cột tiếp theo
                         column++;
                         if (column >= maxColumns)
@@ -291,6 +322,12 @@ namespace WindowsFormsApp1
                 txtSearch.Text = selectedSuggestion;
                 lsbSuggestions.Visible = false; // Ẩn danh sách đề xuất khi người dùng chọn một đề xuất
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+            pnlProduct.Refresh();
         }
     }
 }

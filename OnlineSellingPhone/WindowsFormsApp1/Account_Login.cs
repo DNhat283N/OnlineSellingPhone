@@ -67,6 +67,10 @@ namespace WindowsFormsApp1
             if (lblNoUsername.Visible == false && lblNoPassword.Visible == false)
             {
                 MessageBox.Show("Đăng nhập thành công");
+                Account_LoginSuccessfulcs AcLoginSuccess = new Account_LoginSuccessfulcs();
+                AcLoginSuccess.Dock = DockStyle.Fill;
+                Form1.Instance.PnlContainer.Controls.Clear();
+                Form1.Instance.PnlContainer.Controls.Add(AcLoginSuccess);
             }
             else
             {

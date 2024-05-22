@@ -31,7 +31,6 @@ namespace WindowsFormsApp1
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Product_add_admin));
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblForm = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
@@ -57,40 +56,31 @@ namespace WindowsFormsApp1
             this.lblNoROM = new System.Windows.Forms.Label();
             this.cbbColor = new System.Windows.Forms.ComboBox();
             this.lblNoLinkImage1 = new System.Windows.Forms.Label();
-            this.btnAddLinkImage = new System.Windows.Forms.Button();
+            this.lblNoLinkImage2 = new System.Windows.Forms.Label();
+            this.txtLinkImage2 = new System.Windows.Forms.TextBox();
             this.btnCancel = new WindowsFormsApp1.DSButton();
             this.btnAdd = new WindowsFormsApp1.DSButton();
             this.btnClearLinkImage2 = new System.Windows.Forms.Button();
-            this.lblNoLinkImage2 = new System.Windows.Forms.Label();
-            this.txtLinkImage2 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.btnAddLinkImage = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(168, 42);
+            this.label1.Location = new System.Drawing.Point(169, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(320, 40);
             this.label1.TabIndex = 0;
             this.label1.Text = "Thông tin sản phẩm";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(39, 11);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(98, 95);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // lblForm
             // 
             this.lblForm.BackColor = System.Drawing.Color.White;
-            this.lblForm.Location = new System.Drawing.Point(-1, 131);
+            this.lblForm.Location = new System.Drawing.Point(0, 123);
             this.lblForm.Name = "lblForm";
             this.lblForm.Size = new System.Drawing.Size(1150, 429);
             this.lblForm.TabIndex = 2;
@@ -99,7 +89,7 @@ namespace WindowsFormsApp1
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(46, 168);
+            this.label3.Location = new System.Drawing.Point(47, 160);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(138, 23);
             this.label3.TabIndex = 3;
@@ -107,7 +97,7 @@ namespace WindowsFormsApp1
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(202, 165);
+            this.txtName.Location = new System.Drawing.Point(203, 157);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(366, 32);
             this.txtName.TabIndex = 4;
@@ -117,7 +107,7 @@ namespace WindowsFormsApp1
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(46, 232);
+            this.label4.Location = new System.Drawing.Point(47, 224);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(130, 23);
             this.label4.TabIndex = 5;
@@ -127,7 +117,7 @@ namespace WindowsFormsApp1
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(46, 294);
+            this.label5.Location = new System.Drawing.Point(47, 286);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 23);
             this.label5.TabIndex = 7;
@@ -137,7 +127,7 @@ namespace WindowsFormsApp1
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(46, 358);
+            this.label6.Location = new System.Drawing.Point(47, 350);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(44, 23);
             this.label6.TabIndex = 9;
@@ -145,7 +135,7 @@ namespace WindowsFormsApp1
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(202, 355);
+            this.txtPrice.Location = new System.Drawing.Point(203, 347);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(366, 32);
             this.txtPrice.TabIndex = 10;
@@ -156,7 +146,7 @@ namespace WindowsFormsApp1
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(46, 413);
+            this.label7.Location = new System.Drawing.Point(47, 405);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(83, 23);
             this.label7.TabIndex = 11;
@@ -164,7 +154,7 @@ namespace WindowsFormsApp1
             // 
             // nudQuantity
             // 
-            this.nudQuantity.Location = new System.Drawing.Point(202, 413);
+            this.nudQuantity.Location = new System.Drawing.Point(203, 405);
             this.nudQuantity.Name = "nudQuantity";
             this.nudQuantity.Size = new System.Drawing.Size(120, 32);
             this.nudQuantity.TabIndex = 12;
@@ -176,7 +166,7 @@ namespace WindowsFormsApp1
             this.lblNoName.BackColor = System.Drawing.Color.White;
             this.lblNoName.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNoName.ForeColor = System.Drawing.Color.Red;
-            this.lblNoName.Location = new System.Drawing.Point(225, 200);
+            this.lblNoName.Location = new System.Drawing.Point(226, 192);
             this.lblNoName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNoName.Name = "lblNoName";
             this.lblNoName.Size = new System.Drawing.Size(211, 17);
@@ -189,7 +179,7 @@ namespace WindowsFormsApp1
             this.lblNoManufacturer.BackColor = System.Drawing.Color.White;
             this.lblNoManufacturer.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNoManufacturer.ForeColor = System.Drawing.Color.Red;
-            this.lblNoManufacturer.Location = new System.Drawing.Point(225, 264);
+            this.lblNoManufacturer.Location = new System.Drawing.Point(226, 256);
             this.lblNoManufacturer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNoManufacturer.Name = "lblNoManufacturer";
             this.lblNoManufacturer.Size = new System.Drawing.Size(203, 17);
@@ -202,7 +192,7 @@ namespace WindowsFormsApp1
             this.lblNoColor.BackColor = System.Drawing.Color.White;
             this.lblNoColor.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNoColor.ForeColor = System.Drawing.Color.Red;
-            this.lblNoColor.Location = new System.Drawing.Point(225, 326);
+            this.lblNoColor.Location = new System.Drawing.Point(226, 318);
             this.lblNoColor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNoColor.Name = "lblNoColor";
             this.lblNoColor.Size = new System.Drawing.Size(177, 17);
@@ -215,7 +205,7 @@ namespace WindowsFormsApp1
             this.lblNoPrice.BackColor = System.Drawing.Color.White;
             this.lblNoPrice.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNoPrice.ForeColor = System.Drawing.Color.Red;
-            this.lblNoPrice.Location = new System.Drawing.Point(225, 390);
+            this.lblNoPrice.Location = new System.Drawing.Point(226, 382);
             this.lblNoPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNoPrice.Name = "lblNoPrice";
             this.lblNoPrice.Size = new System.Drawing.Size(139, 17);
@@ -228,7 +218,7 @@ namespace WindowsFormsApp1
             this.lblNoQuantity.BackColor = System.Drawing.Color.White;
             this.lblNoQuantity.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNoQuantity.ForeColor = System.Drawing.Color.Red;
-            this.lblNoQuantity.Location = new System.Drawing.Point(225, 447);
+            this.lblNoQuantity.Location = new System.Drawing.Point(226, 439);
             this.lblNoQuantity.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNoQuantity.Name = "lblNoQuantity";
             this.lblNoQuantity.Size = new System.Drawing.Size(245, 17);
@@ -245,7 +235,7 @@ namespace WindowsFormsApp1
             "Realme",
             "Samsung",
             "Xiaomi"});
-            this.cbbManufacturer.Location = new System.Drawing.Point(202, 232);
+            this.cbbManufacturer.Location = new System.Drawing.Point(203, 224);
             this.cbbManufacturer.Name = "cbbManufacturer";
             this.cbbManufacturer.Size = new System.Drawing.Size(366, 31);
             this.cbbManufacturer.Sorted = true;
@@ -257,7 +247,7 @@ namespace WindowsFormsApp1
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(46, 476);
+            this.label2.Location = new System.Drawing.Point(47, 468);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 23);
             this.label2.TabIndex = 47;
@@ -267,18 +257,20 @@ namespace WindowsFormsApp1
             // 
             this.txtLinkImage1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLinkImage1.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtLinkImage1.Location = new System.Drawing.Point(202, 476);
+            this.txtLinkImage1.Location = new System.Drawing.Point(203, 468);
             this.txtLinkImage1.Name = "txtLinkImage1";
             this.txtLinkImage1.Size = new System.Drawing.Size(366, 32);
             this.txtLinkImage1.TabIndex = 48;
             this.txtLinkImage1.Text = "Link URL hình ảnh 1";
+            this.txtLinkImage1.Click += new System.EventHandler(this.txtLinkImage1_Click);
             this.txtLinkImage1.TextChanged += new System.EventHandler(this.txtLinkImage1_TextChanged);
+            this.txtLinkImage1.Leave += new System.EventHandler(this.txtLinkImage1_Leave);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(657, 168);
+            this.label9.Location = new System.Drawing.Point(658, 160);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(54, 23);
             this.label9.TabIndex = 52;
@@ -288,7 +280,7 @@ namespace WindowsFormsApp1
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(657, 232);
+            this.label10.Location = new System.Drawing.Point(658, 224);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(56, 23);
             this.label10.TabIndex = 53;
@@ -296,7 +288,7 @@ namespace WindowsFormsApp1
             // 
             // txtRAM
             // 
-            this.txtRAM.Location = new System.Drawing.Point(746, 165);
+            this.txtRAM.Location = new System.Drawing.Point(747, 157);
             this.txtRAM.Name = "txtRAM";
             this.txtRAM.Size = new System.Drawing.Size(366, 32);
             this.txtRAM.TabIndex = 56;
@@ -304,7 +296,7 @@ namespace WindowsFormsApp1
             // 
             // txtROM
             // 
-            this.txtROM.Location = new System.Drawing.Point(746, 229);
+            this.txtROM.Location = new System.Drawing.Point(747, 221);
             this.txtROM.Name = "txtROM";
             this.txtROM.Size = new System.Drawing.Size(366, 32);
             this.txtROM.TabIndex = 57;
@@ -316,7 +308,7 @@ namespace WindowsFormsApp1
             this.lblNoRAM.BackColor = System.Drawing.Color.White;
             this.lblNoRAM.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNoRAM.ForeColor = System.Drawing.Color.Red;
-            this.lblNoRAM.Location = new System.Drawing.Point(796, 200);
+            this.lblNoRAM.Location = new System.Drawing.Point(797, 192);
             this.lblNoRAM.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNoRAM.Name = "lblNoRAM";
             this.lblNoRAM.Size = new System.Drawing.Size(149, 17);
@@ -329,7 +321,7 @@ namespace WindowsFormsApp1
             this.lblNoROM.BackColor = System.Drawing.Color.White;
             this.lblNoROM.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNoROM.ForeColor = System.Drawing.Color.Red;
-            this.lblNoROM.Location = new System.Drawing.Point(796, 264);
+            this.lblNoROM.Location = new System.Drawing.Point(797, 256);
             this.lblNoROM.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNoROM.Name = "lblNoROM";
             this.lblNoROM.Size = new System.Drawing.Size(151, 17);
@@ -348,7 +340,7 @@ namespace WindowsFormsApp1
             "Xanh đen",
             "Xanh dương",
             "Xanh lá"});
-            this.cbbColor.Location = new System.Drawing.Point(201, 292);
+            this.cbbColor.Location = new System.Drawing.Point(202, 284);
             this.cbbColor.Name = "cbbColor";
             this.cbbColor.Size = new System.Drawing.Size(367, 31);
             this.cbbColor.Sorted = true;
@@ -362,25 +354,40 @@ namespace WindowsFormsApp1
             this.lblNoLinkImage1.BackColor = System.Drawing.Color.White;
             this.lblNoLinkImage1.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNoLinkImage1.ForeColor = System.Drawing.Color.Red;
-            this.lblNoLinkImage1.Location = new System.Drawing.Point(225, 511);
+            this.lblNoLinkImage1.Location = new System.Drawing.Point(226, 503);
             this.lblNoLinkImage1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNoLinkImage1.Name = "lblNoLinkImage1";
             this.lblNoLinkImage1.Size = new System.Drawing.Size(203, 17);
             this.lblNoLinkImage1.TabIndex = 67;
             this.lblNoLinkImage1.Text = "* Vui lòng nhập link hình ảnh";
             // 
-            // btnAddLinkImage
+            // lblNoLinkImage2
             // 
-            this.btnAddLinkImage.BackColor = System.Drawing.Color.White;
-            this.btnAddLinkImage.FlatAppearance.BorderSize = 0;
-            this.btnAddLinkImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddLinkImage.Image = ((System.Drawing.Image)(resources.GetObject("btnAddLinkImage.Image")));
-            this.btnAddLinkImage.Location = new System.Drawing.Point(574, 476);
-            this.btnAddLinkImage.Name = "btnAddLinkImage";
-            this.btnAddLinkImage.Size = new System.Drawing.Size(37, 33);
-            this.btnAddLinkImage.TabIndex = 68;
-            this.btnAddLinkImage.UseVisualStyleBackColor = false;
-            this.btnAddLinkImage.Click += new System.EventHandler(this.btnAddLinkImage_Click);
+            this.lblNoLinkImage2.AutoSize = true;
+            this.lblNoLinkImage2.BackColor = System.Drawing.Color.White;
+            this.lblNoLinkImage2.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoLinkImage2.ForeColor = System.Drawing.Color.Red;
+            this.lblNoLinkImage2.Location = new System.Drawing.Point(653, 503);
+            this.lblNoLinkImage2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblNoLinkImage2.Name = "lblNoLinkImage2";
+            this.lblNoLinkImage2.Size = new System.Drawing.Size(203, 17);
+            this.lblNoLinkImage2.TabIndex = 70;
+            this.lblNoLinkImage2.Text = "* Vui lòng nhập link hình ảnh";
+            this.lblNoLinkImage2.Visible = false;
+            // 
+            // txtLinkImage2
+            // 
+            this.txtLinkImage2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLinkImage2.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtLinkImage2.Location = new System.Drawing.Point(645, 468);
+            this.txtLinkImage2.Name = "txtLinkImage2";
+            this.txtLinkImage2.Size = new System.Drawing.Size(366, 32);
+            this.txtLinkImage2.TabIndex = 69;
+            this.txtLinkImage2.Text = "Link URL hình ảnh 2";
+            this.txtLinkImage2.Visible = false;
+            this.txtLinkImage2.Click += new System.EventHandler(this.txtLinkImage2_Click);
+            this.txtLinkImage2.TextChanged += new System.EventHandler(this.txtLinkImage2_TextChanged);
+            this.txtLinkImage2.Leave += new System.EventHandler(this.txtLinkImage2_Leave);
             // 
             // btnCancel
             // 
@@ -392,7 +399,7 @@ namespace WindowsFormsApp1
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(333, 578);
+            this.btnCancel.Location = new System.Drawing.Point(334, 570);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(155, 51);
             this.btnCancel.TabIndex = 16;
@@ -411,7 +418,7 @@ namespace WindowsFormsApp1
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(139, 578);
+            this.btnAdd.Location = new System.Drawing.Point(140, 570);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(155, 51);
             this.btnAdd.TabIndex = 15;
@@ -426,37 +433,36 @@ namespace WindowsFormsApp1
             this.btnClearLinkImage2.FlatAppearance.BorderSize = 0;
             this.btnClearLinkImage2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClearLinkImage2.Image = ((System.Drawing.Image)(resources.GetObject("btnClearLinkImage2.Image")));
-            this.btnClearLinkImage2.Location = new System.Drawing.Point(1054, 478);
+            this.btnClearLinkImage2.Location = new System.Drawing.Point(1035, 463);
             this.btnClearLinkImage2.Name = "btnClearLinkImage2";
             this.btnClearLinkImage2.Size = new System.Drawing.Size(37, 33);
             this.btnClearLinkImage2.TabIndex = 71;
             this.btnClearLinkImage2.UseVisualStyleBackColor = false;
             this.btnClearLinkImage2.Visible = false;
+            this.btnClearLinkImage2.Click += new System.EventHandler(this.btnClearLinkImage2_Click);
             // 
-            // lblNoLinkImage2
+            // btnAddLinkImage
             // 
-            this.lblNoLinkImage2.AutoSize = true;
-            this.lblNoLinkImage2.BackColor = System.Drawing.Color.White;
-            this.lblNoLinkImage2.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNoLinkImage2.ForeColor = System.Drawing.Color.Red;
-            this.lblNoLinkImage2.Location = new System.Drawing.Point(669, 513);
-            this.lblNoLinkImage2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblNoLinkImage2.Name = "lblNoLinkImage2";
-            this.lblNoLinkImage2.Size = new System.Drawing.Size(203, 17);
-            this.lblNoLinkImage2.TabIndex = 70;
-            this.lblNoLinkImage2.Text = "* Vui lòng nhập link hình ảnh";
-            this.lblNoLinkImage2.Visible = false;
+            this.btnAddLinkImage.BackColor = System.Drawing.Color.White;
+            this.btnAddLinkImage.FlatAppearance.BorderSize = 0;
+            this.btnAddLinkImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddLinkImage.Image = ((System.Drawing.Image)(resources.GetObject("btnAddLinkImage.Image")));
+            this.btnAddLinkImage.Location = new System.Drawing.Point(575, 468);
+            this.btnAddLinkImage.Name = "btnAddLinkImage";
+            this.btnAddLinkImage.Size = new System.Drawing.Size(37, 33);
+            this.btnAddLinkImage.TabIndex = 68;
+            this.btnAddLinkImage.UseVisualStyleBackColor = false;
+            this.btnAddLinkImage.Click += new System.EventHandler(this.btnAddLinkImage_Click);
             // 
-            // txtLinkImage2
+            // pictureBox1
             // 
-            this.txtLinkImage2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLinkImage2.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtLinkImage2.Location = new System.Drawing.Point(661, 478);
-            this.txtLinkImage2.Name = "txtLinkImage2";
-            this.txtLinkImage2.Size = new System.Drawing.Size(366, 32);
-            this.txtLinkImage2.TabIndex = 69;
-            this.txtLinkImage2.Text = "Link URL hình ảnh 2";
-            this.txtLinkImage2.Visible = false;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(40, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(98, 95);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // Product_add_admin
             // 
@@ -499,9 +505,9 @@ namespace WindowsFormsApp1
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Product_add_admin";
-            this.Size = new System.Drawing.Size(1150, 596);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Size = new System.Drawing.Size(1087, 533);
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
