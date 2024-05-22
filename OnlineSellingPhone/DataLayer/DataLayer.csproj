@@ -68,21 +68,11 @@
     <Compile Include="Enities\PhoneNumber.cs" />
     <Compile Include="Enities\Staff.cs" />
     <Compile Include="Enities\UserRoleEnum.cs" />
-    <Compile Include="Migrations\202405221438388_Migrations.cs" />
-    <Compile Include="Migrations\202405221438388_Migrations.designer.cs">
-      <DependentUpon>202405221438388_Migrations.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202405221438388_Migrations.resx">
-      <DependentUpon>202405221438388_Migrations.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
