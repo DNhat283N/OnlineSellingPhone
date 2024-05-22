@@ -63,6 +63,7 @@ namespace WindowsFormsApp1
             this.txtUsername.Size = new System.Drawing.Size(326, 32);
             this.txtUsername.TabIndex = 1;
             this.txtUsername.Text = " Username";
+            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             this.txtUsername.Enter += new System.EventHandler(this.txtUsername_Enter);
             this.txtUsername.Leave += new System.EventHandler(this.txtUsername_Leave);
             // 
@@ -99,6 +100,7 @@ namespace WindowsFormsApp1
             this.txtPassword.TabIndex = 4;
             this.txtPassword.Text = " Password";
             this.txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
             this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
             // 
@@ -124,7 +126,6 @@ namespace WindowsFormsApp1
             this.lblNoUsername.Size = new System.Drawing.Size(222, 17);
             this.lblNoUsername.TabIndex = 7;
             this.lblNoUsername.Text = "* Vui lòng nhập tên đăng nhập";
-            this.lblNoUsername.Visible = false;
             // 
             // lblNoPassword
             // 
@@ -137,7 +138,6 @@ namespace WindowsFormsApp1
             this.lblNoPassword.Size = new System.Drawing.Size(180, 17);
             this.lblNoPassword.TabIndex = 8;
             this.lblNoPassword.Text = "* Vui lòng nhập mật khẩu";
-            this.lblNoPassword.Visible = false;
             // 
             // label4
             // 
