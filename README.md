@@ -1,4 +1,4 @@
-# OnlineSellingPhone_DatabaseCoding_BigAssignment
+# OnlineSellingPhone
 Using .NetFramework version 4.6, and EntityFramework version 6.4.4 are required to run the project.
 
 How to run the project?
